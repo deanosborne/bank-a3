@@ -26,18 +26,16 @@ namespace a3.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 myForm = new Form3();
+            AllCustomer myForm = new AllCustomer();
             myForm.Closed += (s, args) => this.Close();
             myForm.Show();
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void label2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Account myForm = new Account();
-            myForm.Closed += (s, args) => this.Close();
-            myForm.Show();
+
         }
     }
 }

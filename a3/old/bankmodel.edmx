@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="bankdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="a_id" />
+          </Key>
+          <Property Name="a_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="a_name" Type="varchar" MaxLength="177" />
+          <Property Name="c_id" Type="int" Nullable="false" />
+          <Property Name="a_fee" Type="int" />
+          <Property Name="a_interest" Type="int" />
+          <Property Name="at_type" Type="varchar" MaxLength="1" />
+          <Property Name="a_balance" Type="int" />
+        </EntityType>
+        <EntityType Name="Accounttype">
+          <Key>
+            <PropertyRef Name="at_type" />
+          </Key>
+          <Property Name="at_type" Type="varchar" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="c_id" />
+          </Key>
+          <Property Name="c_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="c_name" Type="varchar" MaxLength="177" />
+          <Property Name="c_email" Type="varchar" MaxLength="177" />
+          <Property Name="c_phone" Type="int" />
+          <Property Name="c_password" Type="varchar" MaxLength="177" />
+          <Property Name="c_staff" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="t_id" />
+          </Key>
+          <Property Name="t_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="t_amount" Type="int" Nullable="false" />
+          <Property Name="a_id" Type="int" />
+          <Property Name="tt_type" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Transactiontype">
+          <Key>
+            <PropertyRef Name="tt_type" />
+          </Key>
+          <Property Name="tt_type" Type="varchar" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <Association Name="a_id">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="a_id" />
+            </Principal>
+            <Dependent Role="Transaction">
+              <PropertyRef Name="a_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="at_type">
+          <End Role="Accounttype" Type="Self.Accounttype" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Accounttype">
+              <PropertyRef Name="at_type" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="at_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="c_id">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="c_id" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="c_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tt_type">
+          <End Role="Transactiontype" Type="Self.Transactiontype" Multiplicity="0..1" />
+          <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transactiontype">
+              <PropertyRef Name="tt_type" />
+            </Principal>
+            <Dependent Role="Transaction">
+              <PropertyRef Name="tt_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="bankdbModelStoreContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Accounttype" EntityType="Self.Accounttype" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transactiontype" EntityType="Self.Transactiontype" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="a_id" Association="Self.a_id">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="Transaction" EntitySet="Transaction" />
+          </AssociationSet>
+          <AssociationSet Name="at_type" Association="Self.at_type">
+            <End Role="Accounttype" EntitySet="Accounttype" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="c_id" Association="Self.c_id">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="tt_type" Association="Self.tt_type">
+            <End Role="Transactiontype" EntitySet="Transactiontype" />
+            <End Role="Transaction" EntitySet="Transaction" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bankdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="bankdbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="bankdbModel.Account" />
+          <EntitySet Name="Accounttypes" EntityType="bankdbModel.Accounttype" />
+          <EntitySet Name="Customers" EntityType="bankdbModel.Customer" />
+          <EntitySet Name="Transactions" EntityType="bankdbModel.Transaction" />
+          <EntitySet Name="Transactiontypes" EntityType="bankdbModel.Transactiontype" />
+          <AssociationSet Name="a_id" Association="bankdbModel.a_id">
+            <End Role="Account" EntitySet="Accounts" />
+            <End Role="Transaction" EntitySet="Transactions" />
+          </AssociationSet>
+          <AssociationSet Name="at_type" Association="bankdbModel.at_type">
+            <End Role="Accounttype" EntitySet="Accounttypes" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="c_id" Association="bankdbModel.c_id">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="tt_type" Association="bankdbModel.tt_type">
+            <End Role="Transactiontype" EntitySet="Transactiontypes" />
+            <End Role="Transaction" EntitySet="Transactions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="a_id" />
+          </Key>
+          <Property Name="a_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="a_name" Type="String" MaxLength="177" FixedLength="false" Unicode="false" />
+          <Property Name="c_id" Type="Int32" Nullable="false" />
+          <Property Name="a_fee" Type="Int32" />
+          <Property Name="a_interest" Type="Int32" />
+          <Property Name="at_type" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="a_balance" Type="Int32" />
+          <NavigationProperty Name="Transactions" Relationship="bankdbModel.a_id" FromRole="Account" ToRole="Transaction" />
+          <NavigationProperty Name="Accounttype" Relationship="bankdbModel.at_type" FromRole="Account" ToRole="Accounttype" />
+          <NavigationProperty Name="Customer" Relationship="bankdbModel.c_id" FromRole="Account" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="Accounttype">
+          <Key>
+            <PropertyRef Name="at_type" />
+          </Key>
+          <Property Name="at_type" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Accounts" Relationship="bankdbModel.at_type" FromRole="Accounttype" ToRole="Account" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="c_id" />
+          </Key>
+          <Property Name="c_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="c_name" Type="String" MaxLength="177" FixedLength="false" Unicode="false" />
+          <Property Name="c_email" Type="String" MaxLength="177" FixedLength="false" Unicode="false" />
+          <Property Name="c_phone" Type="Int32" />
+          <Property Name="c_password" Type="String" MaxLength="177" FixedLength="false" Unicode="false" />
+          <Property Name="c_staff" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Accounts" Relationship="bankdbModel.c_id" FromRole="Customer" ToRole="Account" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="t_id" />
+          </Key>
+          <Property Name="t_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="t_amount" Type="Int32" Nullable="false" />
+          <Property Name="a_id" Type="Int32" />
+          <Property Name="tt_type" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Account" Relationship="bankdbModel.a_id" FromRole="Transaction" ToRole="Account" />
+          <NavigationProperty Name="Transactiontype" Relationship="bankdbModel.tt_type" FromRole="Transaction" ToRole="Transactiontype" />
+        </EntityType>
+        <EntityType Name="Transactiontype">
+          <Key>
+            <PropertyRef Name="tt_type" />
+          </Key>
+          <Property Name="tt_type" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Transactions" Relationship="bankdbModel.tt_type" FromRole="Transactiontype" ToRole="Transaction" />
+        </EntityType>
+        <Association Name="a_id">
+          <End Type="bankdbModel.Account" Role="Account" Multiplicity="0..1" />
+          <End Type="bankdbModel.Transaction" Role="Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="a_id" />
+            </Principal>
+            <Dependent Role="Transaction">
+              <PropertyRef Name="a_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="at_type">
+          <End Type="bankdbModel.Accounttype" Role="Accounttype" Multiplicity="0..1" />
+          <End Type="bankdbModel.Account" Role="Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Accounttype">
+              <PropertyRef Name="at_type" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="at_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="c_id">
+          <End Type="bankdbModel.Customer" Role="Customer" Multiplicity="1" />
+          <End Type="bankdbModel.Account" Role="Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="c_id" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="c_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tt_type">
+          <End Type="bankdbModel.Transactiontype" Role="Transactiontype" Multiplicity="0..1" />
+          <End Type="bankdbModel.Transaction" Role="Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transactiontype">
+              <PropertyRef Name="tt_type" />
+            </Principal>
+            <Dependent Role="Transaction">
+              <PropertyRef Name="tt_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bankdbModelStoreContainer" CdmEntityContainer="bankdbEntities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="bankdbModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="a_balance" ColumnName="a_balance" />
+                <ScalarProperty Name="at_type" ColumnName="at_type" />
+                <ScalarProperty Name="a_interest" ColumnName="a_interest" />
+                <ScalarProperty Name="a_fee" ColumnName="a_fee" />
+                <ScalarProperty Name="c_id" ColumnName="c_id" />
+                <ScalarProperty Name="a_name" ColumnName="a_name" />
+                <ScalarProperty Name="a_id" ColumnName="a_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Accounttypes">
+            <EntityTypeMapping TypeName="bankdbModel.Accounttype">
+              <MappingFragment StoreEntitySet="Accounttype">
+                <ScalarProperty Name="at_type" ColumnName="at_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="bankdbModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="c_staff" ColumnName="c_staff" />
+                <ScalarProperty Name="c_password" ColumnName="c_password" />
+                <ScalarProperty Name="c_phone" ColumnName="c_phone" />
+                <ScalarProperty Name="c_email" ColumnName="c_email" />
+                <ScalarProperty Name="c_name" ColumnName="c_name" />
+                <ScalarProperty Name="c_id" ColumnName="c_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transactions">
+            <EntityTypeMapping TypeName="bankdbModel.Transaction">
+              <MappingFragment StoreEntitySet="Transaction">
+                <ScalarProperty Name="tt_type" ColumnName="tt_type" />
+                <ScalarProperty Name="a_id" ColumnName="a_id" />
+                <ScalarProperty Name="t_amount" ColumnName="t_amount" />
+                <ScalarProperty Name="t_id" ColumnName="t_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transactiontypes">
+            <EntityTypeMapping TypeName="bankdbModel.Transactiontype">
+              <MappingFragment StoreEntitySet="Transactiontype">
+                <ScalarProperty Name="tt_type" ColumnName="tt_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

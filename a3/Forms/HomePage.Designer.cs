@@ -30,14 +30,16 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.homepageLabel = new System.Windows.Forms.Label();
+            this.sfCalendar1 = new Syncfusion.WinForms.Input.SfCalendar();
+            this.countLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(183, 160);
+            this.label1.Location = new System.Drawing.Point(133, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(237, 18);
             this.label1.TabIndex = 10;
@@ -46,37 +48,59 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(184, 215);
+            this.button1.Location = new System.Drawing.Point(136, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 23);
             this.button1.TabIndex = 11;
-            this.button1.Text = "Manage Customers";
+            this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // homepageLabel
             // 
-            this.button2.Location = new System.Drawing.Point(304, 215);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Manage Accounts";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.homepageLabel.AutoSize = true;
+            this.homepageLabel.Location = new System.Drawing.Point(133, 150);
+            this.homepageLabel.Name = "homepageLabel";
+            this.homepageLabel.Size = new System.Drawing.Size(74, 13);
+            this.homepageLabel.TabIndex = 12;
+            this.homepageLabel.Text = "Logged in as: ";
+            this.homepageLabel.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // sfCalendar1
+            // 
+            this.sfCalendar1.Location = new System.Drawing.Point(470, 117);
+            this.sfCalendar1.MinimumSize = new System.Drawing.Size(196, 196);
+            this.sfCalendar1.Name = "sfCalendar1";
+            this.sfCalendar1.Size = new System.Drawing.Size(196, 196);
+            this.sfCalendar1.TabIndex = 13;
+            this.sfCalendar1.Text = "sfCalendar1";
+            // 
+            // countLabel
+            // 
+            this.countLabel.AutoSize = true;
+            this.countLabel.Location = new System.Drawing.Point(133, 177);
+            this.countLabel.Name = "countLabel";
+            this.countLabel.Size = new System.Drawing.Size(85, 13);
+            this.countLabel.TabIndex = 14;
+            this.countLabel.Text = "Customer Count:";
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(809, 444);
+            this.Controls.Add(this.countLabel);
+            this.Controls.Add(this.sfCalendar1);
+            this.Controls.Add(this.homepageLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "HomePage";
             this.Text = "HomePage";
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.SetChildIndex(this.homepageLabel, 0);
+            this.Controls.SetChildIndex(this.sfCalendar1, 0);
+            this.Controls.SetChildIndex(this.countLabel, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,6 +110,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label homepageLabel;
+        private Syncfusion.WinForms.Input.SfCalendar sfCalendar1;
+        private System.Windows.Forms.Label countLabel;
     }
 }

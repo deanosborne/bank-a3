@@ -60,10 +60,20 @@
     <Reference Include="Microsoft.VisualStudio.CodeCoverage.Shim, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeCoverage.16.8.3\lib\net45\Microsoft.VisualStudio.CodeCoverage.Shim.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Core.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Data.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.GridCommon.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfDataGrid.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfInput.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfListView.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Base, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -76,23 +86,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bankmodel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bankmodel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="bankmodel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bankmodel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Controller.cs" />
-    <Compile Include="Forms\Account.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Account.Designer.cs">
-      <DependentUpon>Account.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\AllCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +98,6 @@
     </Compile>
     <Compile Include="Forms\BlankForm.Designer.cs">
       <DependentUpon>BlankForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\EditCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\EditCustomer.Designer.cs">
-      <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
@@ -123,43 +111,30 @@
     <Compile Include="Forms\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountM.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Ihasfee.cs" />
     <Compile Include="Models\Omni.cs" />
+    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Account.resx">
-      <DependentUpon>Account.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AllCustomer.resx">
       <DependentUpon>AllCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BlankForm.resx">
       <DependentUpon>BlankForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditCustomer.resx">
-      <DependentUpon>EditCustomer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
@@ -174,14 +149,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="bankmodel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>bankmodel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="bankmodel.edmx.diagram">
-      <DependentUpon>bankmodel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\a3.models.Account.datasource" />
+    <None Include="Properties\DataSources\a3.models.bankdbEntities.datasource" />
+    <None Include="Properties\DataSources\a3.models.Customer.datasource" />
     <None Include="Properties\DataSources\Controller.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -212,20 +183,10 @@
     <None Include="Resources\bank.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bankdb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bankdb_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>bankdb.mdf</DependentUpon>
-    </Content>
-    <Content Include="bankmodel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>bankmodel.Context.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

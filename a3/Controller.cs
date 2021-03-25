@@ -13,91 +13,131 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections;
 using System.Reflection;
-using a3.Models;
 using a3.Forms;
+using a3.Models;
+using Syncfusion.WinForms.DataGrid;
 
 namespace a3
 {
     public class Controller
     {
+        Account _account = new Account();
         Customer c = new Customer();
+        public List<Account> accList = new List<Account>();
+        public List<Customer> custList = new List<Customer>();
 
-        //List holds data using Customer model
-        public List<Customer> AllCustomers = new List<Customer>();
+        public Controller()
+        {
+            custList.Add(new Customer("Test", "Test", 1, true));
+        }
 
-        //Adds new Customer using name + autogenerate ID
-        public void Add(string name)
+        public void AddAccount(string name, decimal balance, Customer id, decimal fee, decimal interest)
         {
-            AllCustomers.Add(new Customer(name));
+            accList.Add(new Account(name, balance, id, fee, interest));
         }
-        //Adds new Customer using name + id - used for read txt
-        public void Add(string name, string id)
+
+        public void UpdateAccount()
         {
-            AllCustomers.Add(new Customer(name, id));
+
         }
-        //Find Customer based on name - helper for remove
-        public Customer Finduser(string name)
+
+        public void AddCustomer()
         {
-            foreach (Customer c in AllCustomers)
+
+        }
+        public void EditCustomer()
+        {
+
+        }
+
+        public void Display(SfDataGrid dg, Controller _c)
+        {
+            foreach (Customer c in _c.custList)
             {
-                if (c.Name == name)
-                {
-                    return c;
-                }
-            }
-            return null;
-        }
-        //Remover for Customer
-        public void Remove(string name)
-        {
-            AllCustomers.Remove(Finduser(name));
-        }
-        //Read from txt, add to listview
-        public void Display(ListView lv, Controller _c)
-        {
-            lv.Items.Clear();
-            List<string> data = File.ReadAllLines("data.txt").ToList();
-            foreach (string d in data)
-            {
-                string[] items = d.Split(new char[] { ',' },
-                       StringSplitOptions.RemoveEmptyEntries);
-                lv.Items.Add(new ListViewItem(items));
-                if (lv.Items.ContainsKey(d[0].ToString()))
-                {
-                    MessageBox.Show("This is a duplicate netry");
-                }
-                else
-                {
-                    _c.Add(d[0].ToString(), d[1].ToString());
-                }
+                dg.DataSource = _c.custList;
             }
         }
-        //Writes to txt
-        public void WriteFile(ListView lv)
-        {
-            using (TextWriter tw = new StreamWriter("data.txt"))
-            {
-                for (int i = 0; i < lv.Items.Count; i++)
-                {
-                    int ii = 1;
-                    tw.WriteLine(string.Format("{0},{1}", lv.Items[i].SubItems[0].Text, lv.Items[i].SubItems[1].Text));
 
-                    ii++;
-                }
 
-            }
-        }
-        //Writes to listview, failsafe to make sure edits work
-        public void ToListview(ListView lv, Controller _c)
-        {
-            lv.Items.Clear();
-            foreach (Customer c in _c.AllCustomers)
-            {
-                lv.Items.Add(new ListViewItem(new string[] { c.Name, c._Cid }));
-            }
-        }
+        //    Customer c = new Customer();
+
+        //    //List holds data using Customer model
+        //    public List<Customer> AllCustomers = new List<Customer>();
+
+        //    //Adds new Customer using name + autogenerate ID
+        //    public void Add(string name)
+        //    {
+        //        AllCustomers.Add(new Customer(name));
+        //    }
+        //    //Adds new Customer using name + id - used for read txt
+        //    public void Add(string name, string id)
+        //    {
+        //        AllCustomers.Add(new Customer(name, id));
+        //    }
+        //    //Find Customer based on name - helper for remove
+        //    public Customer Finduser(string name)
+        //    {
+        //        foreach (Customer c in AllCustomers)
+        //        {
+        //            if (c.Name == name)
+        //            {
+        //                return c;
+        //            }
+        //        }
+        //        return null;
+        //    }
+        //    //Remover for Customer
+        //    public void Remove(string name)
+        //    {
+        //        AllCustomers.Remove(Finduser(name));
+        //    }
+        //    //Read from txt, add to listview
+        //    public void Display(ListView lv, Controller _c)
+        //    {
+        //        lv.Items.Clear();
+        //        List<string> data = File.ReadAllLines("data.txt").ToList();
+        //        foreach (string d in data)
+        //        {
+        //            string[] items = d.Split(new char[] { ',' },
+        //                   StringSplitOptions.RemoveEmptyEntries);
+        //            lv.Items.Add(new ListViewItem(items));
+        //            if (lv.Items.ContainsKey(d[0].ToString()))
+        //            {
+        //                MessageBox.Show("This is a duplicate netry");
+        //            }
+        //            else
+        //            {
+        //                _c.Add(d[0].ToString(), d[1].ToString());
+        //            }
+        //        }
+        //    }
+        //    //Writes to txt
+        //    public void WriteFile(ListView lv)
+        //    {
+        //        using (TextWriter tw = new StreamWriter("data.txt"))
+        //        {
+        //            for (int i = 0; i < lv.Items.Count; i++)
+        //            {
+        //                int ii = 1;
+        //                tw.WriteLine(string.Format("{0},{1}", lv.Items[i].SubItems[0].Text, lv.Items[i].SubItems[1].Text));
+
+        //                ii++;
+        //            }
+
+        //        }
+        //    }
+        //    //Writes to listview, failsafe to make sure edits work
+        //    public void ToListview(ListView lv, Controller _c)
+        //    {
+        //        lv.Items.Clear();
+        //        foreach (Customer c in _c.AllCustomers)
+        //        {
+        //            lv.Items.Add(new ListViewItem(new string[] { c.Name, c._Cid }));
+        //        }
+        //    }
+
+        //}
+
 
     }
-
-
 }

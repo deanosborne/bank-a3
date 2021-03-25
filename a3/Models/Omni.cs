@@ -7,71 +7,85 @@ using System.Windows.Forms;
 
 namespace a3.Models
 {
-    public class Omni : AccountM
+    public class Omni : Account, Ihasfee, Ihasinterest, Ihasname
     {
-        public Omni()
+        public decimal Fee()
         {
-            this.accounttype = "Omni";
-            this.fee = 10;
-            this.interestthreshold = 1000;
-            this.interestrate = 4;
-        }
-        public void Deposit(int amount)
-        {
-            try
-            {
-                DepositMoney(amount);
-            }
-            catch (InsufficientFundsException f)
-            {
-                MessageBox.Show(f.Message + accounttype);
-            }
+            return 10.00m;
         }
 
-        public void Withdraw(int amount)
+        public decimal Interest()
         {
-            try
-            {
-                WithdrawMoney(amount);
-            }
-            catch (InsufficientFundsException f)
-            {
-                MessageBox.Show(f.Message + accounttype + "\r\nYou have been charged $" + fee);
-                balance -= fee;
-            }
-
+            return 0.04m;
         }
 
-        public void Interest()
+        public string Name()
         {
-            try
-            {
-                CalculateInterest(interestrate, interestthreshold);
-            }
-            catch (InsufficientBalanceException f)
-            {
-                MessageBox.Show(f.Message + accounttype);
-            }
+            return "Omni";
+        }
+        //public Omni()
+        //{
+        //    this.a_a = "Omni";
+        //    this.fee = 10;
+        //    this.interestthreshold = 1000;
+        //    this.interestrate = 4;
+        //}
+        //public void Deposit(int amount)
+        //{
+        //    try
+        //    {
+        //        DepositMoney(amount);
+        //    }
+        //    catch (InsufficientFundsException f)
+        //    {
+        //        MessageBox.Show(f.Message + accounttype);
+        //    }
+        //}
 
-        }
+        //public void Withdraw(int amount)
+        //{
+        //    try
+        //    {
+        //        WithdrawMoney(amount);
+        //    }
+        //    catch (InsufficientFundsException f)
+        //    {
+        //        MessageBox.Show(f.Message + accounttype + "\r\nYou have been charged $" + fee);
+        //        balance -= fee;
+        //    }
 
-        public override string AccountInfo(string AccountType)
-        {
-            return base.AccountInfo(AccountType);
-        }
+        //}
 
-        public override string DepositInfo(decimal amount, string AccountType)
-        {
-            return base.DepositInfo(amount, AccountType);
-        }
-        public override string WithdrawInfo(decimal amount, string AccountType)
-        {
-            return base.WithdrawInfo(amount, AccountType);
-        }
+        //public void Interest()
+        //{
+        //    try
+        //    {
+        //        CalculateInterest(interestrate, interestthreshold);
+        //    }
+        //    catch (InsufficientBalanceException f)
+        //    {
+        //        MessageBox.Show(f.Message + accounttype);
+        //    }
 
-        public override string InterestInfo(string AccountType)
-        {
-            return base.InterestInfo(AccountType);
-        }
+        //}
+
+        //public override string AccountInfo(string AccountType)
+        //{
+        //    return base.AccountInfo(AccountType);
+        //}
+
+        //public override string DepositInfo(decimal amount, string AccountType)
+        //{
+        //    return base.DepositInfo(amount, AccountType);
+        //}
+        //public override string WithdrawInfo(decimal amount, string AccountType)
+        //{
+        //    return base.WithdrawInfo(amount, AccountType);
+        //}
+
+        //public override string InterestInfo(string AccountType)
+        //{
+        //    return base.InterestInfo(AccountType);
+        //}
     }
 }

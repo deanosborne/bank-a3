@@ -26,33 +26,12 @@ namespace a3.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\imdea\\source\\repos\\a" +
-            "3\\a3\\Forms\\dbbank.mdf;Integrated Security=True")]
-        public string bankconn {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\bankdb.mdf;In" +
+            "tegrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFram" +
+            "ework")]
+        public string bankdbConnectionString {
             get {
-                return ((string)(this["bankconn"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbbank.mdf;In" +
-            "tegrated Security=True")]
-        public string connectbankdb {
-            get {
-                return ((string)(this["connectbankdb"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Forms\\dbbank." +
-            "mdf;Integrated Security=True")]
-        public string dbbankConnectionString {
-            get {
-                return ((string)(this["dbbankConnectionString"]));
+                return ((string)(this["bankdbConnectionString"]));
             }
         }
     }

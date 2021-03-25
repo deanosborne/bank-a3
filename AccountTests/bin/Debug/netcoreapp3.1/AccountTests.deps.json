@@ -1076,6 +1076,70 @@
         "runtime": {
           "a3.exe": {}
         }
+      },
+      "Syncfusion.SfDataGrid.WinForms/18.4460.0.30": {
+        "runtime": {
+          "Syncfusion.SfDataGrid.WinForms.dll": {
+            "assemblyVersion": "18.4460.0.30",
+            "fileVersion": "18.4460.0.30"
+          }
+        }
+      },
+      "Syncfusion.SfInput.WinForms/18.4460.0.30": {
+        "runtime": {
+          "Syncfusion.SfInput.WinForms.dll": {
+            "assemblyVersion": "18.4460.0.30",
+            "fileVersion": "18.4460.0.30"
+          }
+        }
+      },
+      "Syncfusion.Data.WinForms/18.4460.0.30": {
+        "runtime": {
+          "Syncfusion.Data.WinForms.dll": {
+            "assemblyVersion": "18.4460.0.30",
+            "fileVersion": "18.4460.0.30"
+          }
+        }
+      },
+      "Syncfusion.Shared.Base/18.4460.0.30": {
+        "runtime": {
+          "Syncfusion.Shared.Base.dll": {
+            "assemblyVersion": "18.4460.0.30",
+            "fileVersion": "18.4460.0.30"
+          }
+        }
+      },
+      "Syncfusion.Core.WinForms/18.4460.0.30": {
+        "runtime": {
+          "Syncfusion.Core.WinForms.dll": {
+            "assemblyVersion": "18.4460.0.30",
+            "fileVersion": "18.4460.0.30"
+          }
+        }
+      },
+      "Syncfusion.GridCommon.WinForms/18.4460.0.30": {
+        "runtime": {
+          "Syncfusion.GridCommon.WinForms.dll": {
+            "assemblyVersion": "18.4460.0.30",
+            "fileVersion": "18.4460.0.30"
+          }
+        }
+      },
+      "Syncfusion.SfListView.WinForms/18.4460.0.30": {
+        "runtime": {
+          "Syncfusion.SfListView.WinForms.dll": {
+            "assemblyVersion": "18.4460.0.30",
+            "fileVersion": "18.4460.0.30"
+          }
+        }
+      },
+      "Syncfusion.DataSource.WinForms/18.4460.0.30": {
+        "runtime": {
+          "Syncfusion.DataSource.WinForms.dll": {
+            "assemblyVersion": "18.4460.0.30",
+            "fileVersion": "18.4460.0.30"
+          }
+        }
       }
     }
   },
@@ -1696,6 +1760,46 @@
     },
     "a3/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.SfDataGrid.WinForms/18.4460.0.30": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.SfInput.WinForms/18.4460.0.30": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.Data.WinForms/18.4460.0.30": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.Shared.Base/18.4460.0.30": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.Core.WinForms/18.4460.0.30": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.GridCommon.WinForms/18.4460.0.30": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.SfListView.WinForms/18.4460.0.30": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.DataSource.WinForms/18.4460.0.30": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

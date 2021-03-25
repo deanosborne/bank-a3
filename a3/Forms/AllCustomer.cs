@@ -21,12 +21,34 @@ namespace a3.Forms
 
         private void AllCustomer_Load(object sender, EventArgs e)
         {
+            sfDataGrid_cm.DataSource = _controller.custList;
+            //_controller.Display(listView1, _controller);
 
-            _controller.Display(listView1, _controller);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cm_updateBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
