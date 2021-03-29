@@ -39,7 +39,7 @@ namespace a3
             accList.Add(new Account(name, balance, id, fee, interest));
         }
 
-        public void UpdateAccount()
+        public void EditAccount()
         {
 
         }
@@ -52,6 +52,23 @@ namespace a3
         {
 
         }
+
+        public Customer RemoveCustomer(int id)
+        {
+            foreach (Customer c in custList)
+            {
+                if (c.Id == id)
+                {
+                    return c;
+                }
+            }
+            return null;
+        }
+        public void Remove(int id)
+        {
+            custList.Remove(RemoveCustomer(id));
+        }
+
 
         public void WriteBinaryData()
         {

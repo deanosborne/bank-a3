@@ -127,6 +127,8 @@
             this.sfDataGrid_cm.TabIndex = 12;
             this.sfDataGrid_cm.Text = "sfDataGrid1";
             this.sfDataGrid_cm.CellClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.SfDataGrid_cm_CellClick);
+            this.sfDataGrid_cm.CellDoubleClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.sfDataGrid_cm_CellDoubleClick);
+            this.sfDataGrid_cm.Click += new System.EventHandler(this.sfDataGrid_cm_Click);
             // 
             // tabControl1
             // 
@@ -184,6 +186,7 @@
             this.cm_deleteBtn.TabIndex = 42;
             this.cm_deleteBtn.Text = "Delete";
             this.cm_deleteBtn.UseVisualStyleBackColor = true;
+            this.cm_deleteBtn.Click += new System.EventHandler(this.cm_deleteBtn_Click);
             // 
             // cm_searchTxt
             // 
@@ -201,6 +204,7 @@
             this.cm_updateBtn.TabIndex = 41;
             this.cm_updateBtn.Text = "Update";
             this.cm_updateBtn.UseVisualStyleBackColor = true;
+            this.cm_updateBtn.Click += new System.EventHandler(this.cm_updateBtn_Click);
             // 
             // radioButton2
             // 
