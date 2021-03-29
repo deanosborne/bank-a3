@@ -30,14 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.cm_searchBox = new System.Windows.Forms.TextBox();
             this.sfDataGrid_cm = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.managectab = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.cm_deleteBtn = new System.Windows.Forms.Button();
+            this.cm_searchTxt = new System.Windows.Forms.TextBox();
             this.cm_updateBtn = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -86,10 +84,10 @@
             this.label23 = new System.Windows.Forms.Label();
             this.addctab = new System.Windows.Forms.TabPage();
             this.newcust_clearBtn = new System.Windows.Forms.Button();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.newcust_staffFalse = new System.Windows.Forms.RadioButton();
             this.newcust_comfirmBtn = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.newcust_staffTrue = new System.Windows.Forms.RadioButton();
             this.newcust_nameBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -107,42 +105,28 @@
             this.newacc_feeBox = new System.Windows.Forms.TextBox();
             this.newacc_nameBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid_cm)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.managectab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.manageatab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid_ma)).BeginInit();
             this.attab.SuspendLayout();
             this.addctab.SuspendLayout();
             this.addatab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Search";
-            // 
-            // cm_searchBox
-            // 
-            this.cm_searchBox.Location = new System.Drawing.Point(207, 51);
-            this.cm_searchBox.Name = "cm_searchBox";
-            this.cm_searchBox.Size = new System.Drawing.Size(298, 20);
-            this.cm_searchBox.TabIndex = 11;
             // 
             // sfDataGrid_cm
             // 
             this.sfDataGrid_cm.AccessibleName = "Table";
-            this.sfDataGrid_cm.Location = new System.Drawing.Point(35, 77);
+            this.sfDataGrid_cm.Location = new System.Drawing.Point(12, 77);
             this.sfDataGrid_cm.Name = "sfDataGrid_cm";
-            this.sfDataGrid_cm.Size = new System.Drawing.Size(470, 327);
+            this.sfDataGrid_cm.Size = new System.Drawing.Size(521, 327);
             this.sfDataGrid_cm.TabIndex = 12;
             this.sfDataGrid_cm.Text = "sfDataGrid1";
+            this.sfDataGrid_cm.CellClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.SfDataGrid_cm_CellClick);
             // 
             // tabControl1
             // 
@@ -159,12 +143,11 @@
             // 
             // managectab
             // 
-            this.managectab.Controls.Add(this.comboBox1);
+            this.managectab.Controls.Add(this.label1);
             this.managectab.Controls.Add(this.cm_deleteBtn);
+            this.managectab.Controls.Add(this.cm_searchTxt);
             this.managectab.Controls.Add(this.cm_updateBtn);
             this.managectab.Controls.Add(this.radioButton2);
-            this.managectab.Controls.Add(this.label1);
-            this.managectab.Controls.Add(this.cm_searchBox);
             this.managectab.Controls.Add(this.radioButton1);
             this.managectab.Controls.Add(this.sfDataGrid_cm);
             this.managectab.Controls.Add(this.label3);
@@ -184,20 +167,14 @@
             this.managectab.Text = "Customer Search & Manage";
             this.managectab.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // label1
             // 
-            this.comboBox1.DataSource = this.customerBindingSource;
-            this.comboBox1.DisplayMember = "C_id";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(79, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(122, 21);
-            this.comboBox1.TabIndex = 43;
-            this.comboBox1.ValueMember = "C_id";
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataSource = typeof(a3.Models.Customer);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "Search";
             // 
             // cm_deleteBtn
             // 
@@ -208,6 +185,14 @@
             this.cm_deleteBtn.Text = "Delete";
             this.cm_deleteBtn.UseVisualStyleBackColor = true;
             // 
+            // cm_searchTxt
+            // 
+            this.cm_searchTxt.Location = new System.Drawing.Point(57, 50);
+            this.cm_searchTxt.Name = "cm_searchTxt";
+            this.cm_searchTxt.Size = new System.Drawing.Size(298, 20);
+            this.cm_searchTxt.TabIndex = 62;
+            this.cm_searchTxt.TextChanged += new System.EventHandler(this.cm_searchTxt_TextChanged);
+            // 
             // cm_updateBtn
             // 
             this.cm_updateBtn.Location = new System.Drawing.Point(609, 381);
@@ -216,12 +201,11 @@
             this.cm_updateBtn.TabIndex = 41;
             this.cm_updateBtn.Text = "Update";
             this.cm_updateBtn.UseVisualStyleBackColor = true;
-            this.cm_updateBtn.Click += new System.EventHandler(this.cm_updateBtn_Click);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(589, 318);
+            this.radioButton2.Location = new System.Drawing.Point(608, 318);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(39, 17);
             this.radioButton2.TabIndex = 40;
@@ -232,7 +216,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(540, 318);
+            this.radioButton1.Location = new System.Drawing.Point(559, 318);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(43, 17);
             this.radioButton1.TabIndex = 39;
@@ -243,7 +227,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(537, 77);
+            this.label3.Location = new System.Drawing.Point(556, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 33;
@@ -252,7 +236,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(540, 302);
+            this.label4.Location = new System.Drawing.Point(559, 302);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 38;
@@ -261,7 +245,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(537, 137);
+            this.label6.Location = new System.Drawing.Point(556, 137);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 32;
@@ -270,21 +254,21 @@
             // cm_idbox
             // 
             this.cm_idbox.Enabled = false;
-            this.cm_idbox.Location = new System.Drawing.Point(540, 93);
+            this.cm_idbox.Location = new System.Drawing.Point(559, 93);
             this.cm_idbox.Name = "cm_idbox";
             this.cm_idbox.Size = new System.Drawing.Size(238, 20);
             this.cm_idbox.TabIndex = 31;
             // 
             // cm_phoneBox
             // 
-            this.cm_phoneBox.Location = new System.Drawing.Point(540, 259);
+            this.cm_phoneBox.Location = new System.Drawing.Point(559, 259);
             this.cm_phoneBox.Name = "cm_phoneBox";
             this.cm_phoneBox.Size = new System.Drawing.Size(238, 20);
             this.cm_phoneBox.TabIndex = 37;
             // 
             // cm_nameBox
             // 
-            this.cm_nameBox.Location = new System.Drawing.Point(540, 153);
+            this.cm_nameBox.Location = new System.Drawing.Point(559, 153);
             this.cm_nameBox.Name = "cm_nameBox";
             this.cm_nameBox.Size = new System.Drawing.Size(238, 20);
             this.cm_nameBox.TabIndex = 30;
@@ -292,7 +276,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(537, 191);
+            this.label5.Location = new System.Drawing.Point(556, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 34;
@@ -301,7 +285,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(537, 243);
+            this.label2.Location = new System.Drawing.Point(556, 243);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 36;
@@ -309,7 +293,7 @@
             // 
             // cm_emailBox
             // 
-            this.cm_emailBox.Location = new System.Drawing.Point(540, 208);
+            this.cm_emailBox.Location = new System.Drawing.Point(559, 208);
             this.cm_emailBox.Name = "cm_emailBox";
             this.cm_emailBox.Size = new System.Drawing.Size(238, 20);
             this.cm_emailBox.TabIndex = 35;
@@ -559,7 +543,6 @@
             this.at_amountBox.Name = "at_amountBox";
             this.at_amountBox.Size = new System.Drawing.Size(238, 20);
             this.at_amountBox.TabIndex = 57;
-            this.at_amountBox.TextChanged += new System.EventHandler(this.textBox19_TextChanged);
             // 
             // at_updateBtn
             // 
@@ -578,7 +561,6 @@
             this.label25.Size = new System.Drawing.Size(46, 13);
             this.label25.TabIndex = 58;
             this.label25.Text = "Amount:";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // label24
             // 
@@ -641,10 +623,10 @@
             // addctab
             // 
             this.addctab.Controls.Add(this.newcust_clearBtn);
-            this.addctab.Controls.Add(this.radioButton3);
+            this.addctab.Controls.Add(this.newcust_staffFalse);
             this.addctab.Controls.Add(this.newcust_comfirmBtn);
             this.addctab.Controls.Add(this.label10);
-            this.addctab.Controls.Add(this.radioButton4);
+            this.addctab.Controls.Add(this.newcust_staffTrue);
             this.addctab.Controls.Add(this.newcust_nameBox);
             this.addctab.Controls.Add(this.label7);
             this.addctab.Controls.Add(this.label9);
@@ -668,16 +650,16 @@
             this.newcust_clearBtn.Text = "Clear";
             this.newcust_clearBtn.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // newcust_staffFalse
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(325, 278);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(39, 17);
-            this.radioButton3.TabIndex = 27;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "No";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.newcust_staffFalse.AutoSize = true;
+            this.newcust_staffFalse.Location = new System.Drawing.Point(325, 278);
+            this.newcust_staffFalse.Name = "newcust_staffFalse";
+            this.newcust_staffFalse.Size = new System.Drawing.Size(39, 17);
+            this.newcust_staffFalse.TabIndex = 27;
+            this.newcust_staffFalse.TabStop = true;
+            this.newcust_staffFalse.Text = "No";
+            this.newcust_staffFalse.UseVisualStyleBackColor = true;
             // 
             // newcust_comfirmBtn
             // 
@@ -687,6 +669,7 @@
             this.newcust_comfirmBtn.TabIndex = 21;
             this.newcust_comfirmBtn.Text = "Confirm";
             this.newcust_comfirmBtn.UseVisualStyleBackColor = true;
+            this.newcust_comfirmBtn.Click += new System.EventHandler(this.newcust_comfirmBtn_Click);
             // 
             // label10
             // 
@@ -697,16 +680,16 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Name:";
             // 
-            // radioButton4
+            // newcust_staffTrue
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(276, 278);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(43, 17);
-            this.radioButton4.TabIndex = 26;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Yes";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.newcust_staffTrue.AutoSize = true;
+            this.newcust_staffTrue.Location = new System.Drawing.Point(276, 278);
+            this.newcust_staffTrue.Name = "newcust_staffTrue";
+            this.newcust_staffTrue.Size = new System.Drawing.Size(43, 17);
+            this.newcust_staffTrue.TabIndex = 26;
+            this.newcust_staffTrue.TabStop = true;
+            this.newcust_staffTrue.Text = "Yes";
+            this.newcust_staffTrue.UseVisualStyleBackColor = true;
             // 
             // newcust_nameBox
             // 
@@ -861,6 +844,10 @@
             this.label12.TabIndex = 37;
             this.label12.Text = "Failed fee:";
             // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataSource = typeof(a3.Models.Customer);
+            // 
             // AllCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -876,7 +863,6 @@
             this.tabControl1.ResumeLayout(false);
             this.managectab.ResumeLayout(false);
             this.managectab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.manageatab.ResumeLayout(false);
             this.manageatab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid_ma)).EndInit();
@@ -886,6 +872,7 @@
             this.addctab.PerformLayout();
             this.addatab.ResumeLayout(false);
             this.addatab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -893,8 +880,6 @@
 
         #endregion
         private System.Windows.Forms.BindingSource userBindingSource;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox cm_searchBox;
         private Syncfusion.WinForms.DataGrid.SfDataGrid sfDataGrid_cm;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage addctab;
@@ -912,9 +897,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox cm_emailBox;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton newcust_staffFalse;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton newcust_staffTrue;
         private System.Windows.Forms.TextBox newcust_nameBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
@@ -922,7 +907,6 @@
         private System.Windows.Forms.TextBox newcust_emailBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button newcust_comfirmBtn;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TabPage manageatab;
         private System.Windows.Forms.TabPage addatab;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -970,5 +954,7 @@
         private System.Windows.Forms.Button at_updateBtn;
         public System.Windows.Forms.TextBox at_outputBox;
         private System.Windows.Forms.BindingSource customerBindingSource;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox cm_searchTxt;
     }
 }
