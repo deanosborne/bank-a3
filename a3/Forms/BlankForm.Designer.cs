@@ -35,7 +35,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::a3.Properties.Resources.bank;
-            this.pictureBox1.Location = new System.Drawing.Point(277, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(333, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(238, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -46,7 +46,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 444);
+            this.ClientSize = new System.Drawing.Size(884, 611);
             this.Controls.Add(this.pictureBox1);
             this.Name = "BlankForm";
             this.Text = "BlankForm";

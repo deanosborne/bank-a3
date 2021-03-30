@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace a3.Helper
 {
 	[Serializable]
-	public class SingletonData
+	public class SingletonDataTransaction
 	{
 		private int nextId;
-		private static SingletonData myInstance;
+		private static SingletonDataTransaction myInstance;
 
 		public static int NextId
 		{
@@ -21,21 +21,21 @@ namespace a3.Helper
 			}
 		}
 
-		public static SingletonData getInstance()
+		public static SingletonDataTransaction getInstance()
 		{
 			if (myInstance == null)
 			{
-				myInstance = new SingletonData();
+				myInstance = new SingletonDataTransaction();
 			}
 
 			return myInstance;
 		}
 
-		public static void setInstance(SingletonData s)
+		public static void setInstance(SingletonDataTransaction s)
 		{
 			myInstance = s;
 		}
 
-		private SingletonData() { }
+		private SingletonDataTransaction() { }
 	}
 }

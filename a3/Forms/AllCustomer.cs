@@ -16,14 +16,15 @@ using a3.Models;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using Syncfusion.WinForms.DataGrid.Interactivity;
+using Syncfusion.Data;
 
 namespace a3.Forms
 {
     public partial class AllCustomer : Form1
     {
         Controller _controller = new Controller();
-        bool radio;
-
+        Omni o = new Omni();
+        Account a = new Account();
 
         public AllCustomer()
         {
@@ -31,21 +32,34 @@ namespace a3.Forms
             this.sfDataGrid_cm.AllowSorting = true;
             this.sfDataGrid_cm.AllowEditing = false;
             this.sfDataGrid_cm.AllowDeleting = true;
+            this.sfDataGrid_ma.AllowSorting = true;
+            this.sfDataGrid_ma.AllowEditing = false;
+            this.sfDataGrid_ma.AllowDeleting = true;
+
+            newacc_typeBox.DisplayMember = "Text";
+            newacc_typeBox.ValueMember = "Value";
+            newacc_typeBox.Items.Add(new { Text = "Omni", Value = "Omni" });
+            newacc_typeBox.Items.Add(new { Text = "Free", Value = "Free" });
+            newacc_typeBox.Items.Add(new { Text = "Lifestyle", Value = "Lifestyle" });
+
+            at_transactiontypeCombo.DisplayMember = "Text";
+            at_transactiontypeCombo.ValueMember = "Value";
+            at_transactiontypeCombo.Items.Add(new { Text = "Withdraw", Value = "Withdraw" });
+            at_transactiontypeCombo.Items.Add(new { Text = "Deposit", Value = "Deposit" });
+            at_transactiontypeCombo.Items.Add(new { Text = "Add interest", Value = "Add interest" });
+            at_transactiontypeCombo.Items.Add(new { Text = "Transfer", Value = "Transfer" });
+
             
 
-            if (radioButton1.Checked == true)
-            {
-                radio = true;
-            }
-            else if (radioButton2.Checked == true)
-            {
-                radio = false;
-            }
+
         }
 
         private void AllCustomer_Load(object sender, EventArgs e)
         {
             UpdateForm();
+            UpdateFormAccount();
+            //_controller.WriteBinaryData();
+            //_controller.WriteBinaryDataAccount();
         }
 
         public void UpdateForm()
@@ -54,13 +68,49 @@ namespace a3.Forms
             sfDataGrid_cm.DataSource = _controller.custList;
         }
 
+        public void UpdateFormAccount()
+        {
+            ReadAccount();
+            var custInfo = this.sfDataGrid_cm.CurrentItem as Customer;
+
+            if (this.sfDataGrid_cm.CurrentItem != null)
+            {
+                sfDataGrid_ma.DataSource = _controller.accList;
+                sfDataGrid_ma.Columns["CustomerId"].FilterPredicates.Add(new FilterPredicate() { FilterType = FilterType.Equals, FilterValue = custInfo.Id });
+                foreach (var v in _controller.accList)
+                {
+                    comboBox1.Items.Add(v.Id.ToString());
+                }
+            }
+        }
+
+        public void UpdateFormTransaction()
+        {
+            var accInfo = this.sfDataGrid_ma.CurrentItem as Account;
+            at_idBox.Text = accInfo.Id.ToString();
+            at_typeBox.Text = accInfo.Name.ToString();
+            at_balanceBox.Text = accInfo.Balance.ToString();
+        }
+
         public void Read()
         {
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("Objects.bin", FileMode.Open, FileAccess.Read,
             FileShare.Read);
             _controller.custList = (List<Customer>)formatter.Deserialize(stream);
-            SingletonData.setInstance((SingletonData)formatter.Deserialize(stream));
+            SingletonDataCustomer.setInstance((SingletonDataCustomer)formatter.Deserialize(stream));
+            stream.Close();
+        }
+
+        //account
+        public void ReadAccount()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("AccObjects.bin", FileMode.Open, FileAccess.Read,
+            FileShare.Read);
+            _controller.accList = (List<Account>)formatter.Deserialize(stream);
+            SingletonDataAccount.setInstance((SingletonDataAccount)formatter.Deserialize(stream));
+            SingletonDataTransaction.setInstance((SingletonDataTransaction)formatter.Deserialize(stream));
             stream.Close();
         }
 
@@ -83,6 +133,7 @@ namespace a3.Forms
             if (e.DataRow.RowType == RowType.DefaultRow)
             {
                 cm_idbox.Text = this.sfDataGrid_cm.View.GetPropertyAccessProvider().GetValue(e.DataRow.RowData, "Id").ToString();
+                newacc_idBox.Text = this.sfDataGrid_cm.View.GetPropertyAccessProvider().GetValue(e.DataRow.RowData, "Id").ToString();
                 cm_phoneBox.Text = this.sfDataGrid_cm.View.GetPropertyAccessProvider().GetValue(e.DataRow.RowData, "Phone").ToString();
                 cm_emailBox.Text = this.sfDataGrid_cm.View.GetPropertyAccessProvider().GetValue(e.DataRow.RowData, "Email").ToString();
                 cm_nameBox.Text = this.sfDataGrid_cm.View.GetPropertyAccessProvider().GetValue(e.DataRow.RowData, "Name").ToString();
@@ -124,17 +175,28 @@ namespace a3.Forms
             _controller.AddCustomer(newcust_nameBox.Text, newcust_emailBox.Text, Convert.ToInt32(newcust_phoneBox.Text), staff);
             _controller.WriteBinaryData();
             UpdateForm();
+            tabControl1.SelectedIndex = 0;
         }
 
         #endregion
 
         private void cm_updateBtn_Click(object sender, EventArgs e)
         {
-            var orderInfo = this.sfDataGrid_cm.CurrentItem as Customer;
-            orderInfo.Name = cm_nameBox.Text;
-            orderInfo.Email = cm_emailBox.Text;
-            orderInfo.Phone = Convert.ToInt32(cm_phoneBox.Text);
-            orderInfo.Staff = radio;
+            bool radio;
+            var custInfo = this.sfDataGrid_cm.CurrentItem as Customer;
+            custInfo.Name = cm_nameBox.Text;
+            custInfo.Email = cm_emailBox.Text;
+            custInfo.Phone = Convert.ToInt32(cm_phoneBox.Text);
+
+            if (radioButton1.Checked == true && radioButton2.Checked == false)
+            {
+                custInfo.Staff = true;
+            }
+            else if (radioButton2.Checked == true && radioButton1.Checked == false)
+            {
+                custInfo.Staff = false;
+            }
+
             _controller.WriteBinaryData();
             UpdateForm();
         }
@@ -151,13 +213,161 @@ namespace a3.Forms
 
         private void cm_deleteBtn_Click(object sender, EventArgs e)
         {
-            var orderInfo = this.sfDataGrid_cm.CurrentItem as Customer;
-            _controller.Remove(orderInfo.Id);
+            var custInfo = this.sfDataGrid_cm.CurrentItem as Customer;
+            _controller.RemoveC(custInfo.Id);
             _controller.WriteBinaryData();
             UpdateForm();
         }
 
+        #region new account
 
+        private void newacc_updateBtn_Click(object sender, EventArgs e)
+        {
+            string selected = this.newacc_typeBox.GetItemText(this.newacc_typeBox.SelectedItem);
+            var custInfo = this.sfDataGrid_cm.CurrentItem as Customer;
+            _controller.AddAccount(selected, custInfo.Id);
+
+            _controller.WriteBinaryDataAccount();
+            UpdateFormAccount();
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void newacc_typeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (newacc_typeBox.SelectedIndex == 0)
+            {
+                newacc_feeBox.Text = String.Format("{0:C}", o.fee);
+                newacc_interestBox.Text = String.Format("{0:P2}.", o.interest);
+            }
+        }
+
+        private void newacc_typeBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string value = newacc_typeBox.SelectedValue.ToString();
+        }
+
+        #endregion
+
+        private void cm_toaccountBtn_Click(object sender, EventArgs e)
+        {
+            UpdateFormAccount();
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void SfDataGrid_ma_CellClick(object sender, Syncfusion.WinForms.DataGrid.Events.CellClickEventArgs e)
+        {
+            if (e.DataRow.RowType == RowType.DefaultRow)
+            {
+                string selected = this.newacc_typeBox.GetItemText(this.newacc_typeBox.SelectedItem);
+                var custInfo = this.sfDataGrid_cm.CurrentItem as Customer;
+                ma_nameBox.Text = this.sfDataGrid_ma.View.GetPropertyAccessProvider().GetValue(e.DataRow.RowData, "Id").ToString();
+                ma_typeBox.Text = this.sfDataGrid_ma.View.GetPropertyAccessProvider().GetValue(e.DataRow.RowData, "Name").ToString();
+                ma_interestBox.Text = this.sfDataGrid_ma.View.GetPropertyAccessProvider().GetValue(e.DataRow.RowData, "Interest").ToString();
+                ma_feeBox.Text = this.sfDataGrid_ma.View.GetPropertyAccessProvider().GetValue(e.DataRow.RowData, "Fee").ToString();
+                ma_balBox.Text = this.sfDataGrid_ma.View.GetPropertyAccessProvider().GetValue(e.DataRow.RowData, "Balance").ToString();
+                var radio = custInfo.Staff.ToString();
+                if (radio == "True")
+                {
+                    radioButton6.Checked = true;
+                    radioButton5.Checked = false;
+                }
+                else if (radio == "False")
+                {
+                    radioButton6.Checked = false;
+                    radioButton5.Checked = true;
+                }
+            }
+            else if (e.DataRow.RowType == RowType.HeaderRow)
+            {
+                var cellValue = e.DataColumn.GridColumn.HeaderText;
+            }
+
+
+        }
+
+        #region Transactions
+
+        #endregion
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 2 && this.sfDataGrid_ma.CurrentItem != null)
+            {
+                var accInfo = this.sfDataGrid_ma.CurrentItem as Account;
+                at_idBox.Text = accInfo.Id.ToString();
+                at_typeBox.Text = accInfo.Name.ToString();
+                at_balanceBox.Text = accInfo.Balance.ToString();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+        }
+
+        private void at_backBtn_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void ma_deleteBtn_Click(object sender, EventArgs e)
+        {
+            var accInfo = this.sfDataGrid_ma.CurrentItem as Account;
+            _controller.RemoveA(accInfo.Id);
+            _controller.WriteBinaryDataAccount();
+            UpdateFormAccount();
+        }
+
+
+
+        private void at_updateBtn_Click(object sender, EventArgs e)
+        {
+            var accInfo = this.sfDataGrid_ma.CurrentItem as Account;
+            //withdraw
+            if (at_transactiontypeCombo.SelectedIndex == 0)
+            {
+                decimal w = _controller.Withdraw(Convert.ToDecimal(at_amountBox.Text), Convert.ToDecimal(accInfo.Balance));
+                at_balanceBox.Text = w.ToString();
+                accInfo.Balance = Convert.ToDecimal(at_balanceBox.Text);
+                _controller.WriteBinaryDataAccount();
+                UpdateFormAccount();
+            }
+
+            //deposit
+            if (at_transactiontypeCombo.SelectedIndex == 1)
+            {
+                decimal d = _controller.Deposit(Convert.ToDecimal(at_amountBox.Text), Convert.ToDecimal(accInfo.Balance));
+
+                at_balanceBox.Text = d.ToString();
+                accInfo.Balance = Convert.ToDecimal(at_balanceBox.Text);
+                _controller.WriteBinaryDataAccount();
+                UpdateFormAccount();
+            }
+            //interest
+            if (at_transactiontypeCombo.SelectedIndex == 2)
+            {
+                decimal i = _controller.Interest(Convert.ToDecimal(accInfo.Balance), Convert.ToDecimal(accInfo.Interest));
+
+                at_balanceBox.Text = i.ToString("0.##");
+                accInfo.Balance = Convert.ToDecimal(at_balanceBox.Text);
+                _controller.WriteBinaryDataAccount();
+                UpdateFormAccount();
+            }
+            //transfer
+            if (at_transactiontypeCombo.SelectedIndex == 3)
+            {
+                //MessageBox.Show(at_idBox.Text, comboBox1.SelectedItem.ToString());
+                _controller.Transfer(Convert.ToDecimal(at_amountBox.Text), Convert.ToInt32(at_idBox.Text), Convert.ToInt32(comboBox1.SelectedItem));
+
+                _controller.WriteBinaryDataAccount();
+                UpdateFormAccount();
+                //string a = comboBox1.SelectedItem.ToString();
+                //int ab = (Convert.ToInt32(a));
+                //_controller.accList.Find(p => p.Id == ab).Balance = 9.99m;
+                //_controller.WriteBinaryDataAccount();
+                //UpdateFormAccount();
+            }
+        }
     }
 
 }

@@ -11,27 +11,24 @@ namespace a3.Models
     [Serializable]
     public class Customer
     {
- 
-        Account acc;
         private int c_id;
         private string c_name;
-        private string c_email;
         private int c_phone;
         private bool c_staff;
-        //List<Account> c_accounts = new List<Account>();
+        private string c_email;
 
 
         public Customer() { }
 
         public Customer(string name, string email, int phone, bool staff)
         {
-            SingletonData.getInstance();
-            this.Id = SingletonData.NextId;
+            SingletonDataCustomer.getInstance();
+            this.Id = SingletonDataCustomer.NextId;
             this.Name = name;
-            this.Email = email;
+            
             this.Phone = phone;
             this.Staff = staff;
-            //GetAccounts = new List<Account>();
+            this.Email = email;
         }
 
         public int Id
@@ -46,11 +43,6 @@ namespace a3.Models
             set { c_name = value; }
         }
 
-        public string Email
-        {
-            get { return c_email; }
-            set { c_email = value; }
-        }
         public int Phone
         {
             get { return c_phone; }
@@ -62,11 +54,11 @@ namespace a3.Models
             set { c_staff = value; }
         }
 
-        //public List<Account> GetAccounts
-        //{
-        //    get { return c_accounts; }
-        //    set { c_accounts = acc._GetAccounts; }
-        //}
+        public string Email
+        {
+            get { return c_email; }
+            set { c_email = value; }
+        }
 
     }
 

@@ -7,8 +7,12 @@ using System.Windows.Forms;
 
 namespace a3.Models
 {
+    [Serializable]
     public class Omni : Account, Ihasfee, Ihasinterest, Ihasname
     {
+        public decimal fee { get => Fee(); set => Fee(); }
+        public decimal interest { get => Interest(); set => Interest(); }
+        public string name { get => Name(); set => Name(); }
         public decimal Fee()
         {
             return 10.00m;
@@ -23,13 +27,10 @@ namespace a3.Models
         {
             return "Omni";
         }
-        //public Omni()
-        //{
-        //    this.a_a = "Omni";
-        //    this.fee = 10;
-        //    this.interestthreshold = 1000;
-        //    this.interestrate = 4;
-        //}
+        public Omni()
+        {
+
+        }
         //public void Deposit(int amount)
         //{
         //    try

@@ -117,12 +117,13 @@
     <Compile Include="Forms\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper\SingletonData.cs" />
+    <Compile Include="Helper\SingletonDataTransaction.cs" />
+    <Compile Include="Helper\SingletonDataAccount.cs" />
+    <Compile Include="Helper\SingletonDataCustomer.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Ihasfee.cs" />
     <Compile Include="Models\Omni.cs" />
-    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AllCustomer.resx">
@@ -154,6 +155,7 @@
     <None Include="Properties\DataSources\a3.models.Account.datasource" />
     <None Include="Properties\DataSources\a3.models.bankdbEntities.datasource" />
     <None Include="Properties\DataSources\a3.models.Customer.datasource" />
+    <None Include="Properties\DataSources\a3.Models.Omni.datasource" />
     <None Include="Properties\DataSources\Controller.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
