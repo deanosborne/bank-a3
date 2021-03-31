@@ -19,13 +19,13 @@ namespace a3.Models
         private decimal a_balance;
         private List<Account> GetAccounts;
 
-        public Account(string name, int id)
+        public Account(string name, int id, decimal fee)
         {
             SingletonDataAccount.getInstance();
             this.Id = SingletonDataAccount.NextId;
             this.Name = name;
             this.CustomerId = id;
-            this.Fee = 10.0m;
+            this.Fee = fee;
             this.Interest = 0.04m;
             this.Balance = 0;
         }
@@ -57,7 +57,7 @@ namespace a3.Models
         }
         public decimal Fee
         {
-            get { return a_fee; }
+            get { return 10.00m; }
             set { a_fee = value; }
         }
         public decimal Interest
@@ -70,32 +70,6 @@ namespace a3.Models
         {
             get { return a_balance; }
             set { a_balance = value; }
-        }
-    }
-
-    [Serializable]
-    public class Transaction : Account
-    {
-        private int t_id;
-        private decimal t_amount;
-
-        public Transaction(decimal amount, int id)
-        {
-            SingletonDataTransaction.getInstance();
-            this.TransactionId = SingletonDataAccount.NextId;
-            this.Amount = amount;
-        }
-
-        public int TransactionId
-        {
-            get { return t_id; }
-            set { t_id = value; }
-        }
-
-        public decimal Amount
-        {
-            get { return t_amount; }
-            set { t_amount = value; }
         }
     }
 }

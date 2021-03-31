@@ -117,6 +117,12 @@
     <Compile Include="Forms\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transfer.Designer.cs">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper\SingletonDataTransaction.cs" />
     <Compile Include="Helper\SingletonDataAccount.cs" />
     <Compile Include="Helper\SingletonDataCustomer.cs" />
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transfer.resx">
+      <DependentUpon>Transfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

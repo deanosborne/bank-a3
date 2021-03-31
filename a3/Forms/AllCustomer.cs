@@ -122,8 +122,8 @@ namespace a3.Forms
 
         private void SetSelectedItem()
         {
-           
-            var recordIndex = this.sfDataGrid_cm.TableControl.ResolveToRecordIndex(1);
+            var rowIndex = this.sfDataGrid_cm.SearchController.CurrentRowColumnIndex.RowIndex;
+            var recordIndex = this.sfDataGrid_cm.TableControl.ResolveToRecordIndex(rowIndex);
             this.sfDataGrid_cm.SelectedIndex = recordIndex;
         }
 
@@ -225,7 +225,17 @@ namespace a3.Forms
         {
             string selected = this.newacc_typeBox.GetItemText(this.newacc_typeBox.SelectedItem);
             var custInfo = this.sfDataGrid_cm.CurrentItem as Customer;
-            _controller.AddAccount(selected, custInfo.Id);
+            var thiscustomer = _controller.GetCustomer(custInfo.Id);
+            decimal fee = a.Fee / 2;
+
+            if (thiscustomer.Staff == true)
+            {
+                _controller.AddAccount(selected, custInfo.Id, fee);
+            }
+            else
+            {
+                _controller.AddAccount(selected, custInfo.Id, a.Fee);
+            }
 
             _controller.WriteBinaryDataAccount();
             UpdateFormAccount();
@@ -323,14 +333,16 @@ namespace a3.Forms
         private void at_updateBtn_Click(object sender, EventArgs e)
         {
             var accInfo = this.sfDataGrid_ma.CurrentItem as Account;
+            var idd = accInfo.Id;
             //withdraw
             if (at_transactiontypeCombo.SelectedIndex == 0)
             {
                 decimal w = _controller.Withdraw(Convert.ToDecimal(at_amountBox.Text), Convert.ToDecimal(accInfo.Balance));
                 at_balanceBox.Text = w.ToString();
                 accInfo.Balance = Convert.ToDecimal(at_balanceBox.Text);
+                this.sfDataGrid_cm.SearchController.Search(at_idBox.Text);
+                SetSelectedItem();
                 _controller.WriteBinaryDataAccount();
-                UpdateFormAccount();
             }
 
             //deposit
@@ -340,8 +352,9 @@ namespace a3.Forms
 
                 at_balanceBox.Text = d.ToString();
                 accInfo.Balance = Convert.ToDecimal(at_balanceBox.Text);
+                this.sfDataGrid_cm.SearchController.Search(at_idBox.Text);
+                SetSelectedItem();
                 _controller.WriteBinaryDataAccount();
-                UpdateFormAccount();
             }
             //interest
             if (at_transactiontypeCombo.SelectedIndex == 2)
@@ -350,23 +363,51 @@ namespace a3.Forms
 
                 at_balanceBox.Text = i.ToString("0.##");
                 accInfo.Balance = Convert.ToDecimal(at_balanceBox.Text);
+                this.sfDataGrid_cm.SearchController.Search(at_idBox.Text);
+                SetSelectedItem();
                 _controller.WriteBinaryDataAccount();
-                UpdateFormAccount();
             }
             //transfer
             if (at_transactiontypeCombo.SelectedIndex == 3)
             {
-                //MessageBox.Show(at_idBox.Text, comboBox1.SelectedItem.ToString());
-                _controller.Transfer(Convert.ToDecimal(at_amountBox.Text), Convert.ToInt32(at_idBox.Text), Convert.ToInt32(comboBox1.SelectedItem));
+                
+                decimal[] d = _controller.Transfer(Convert.ToDecimal(at_amountBox.Text), Convert.ToInt32(at_idBox.Text), Convert.ToInt32(comboBox1.SelectedItem));
+                var fromaccount = _controller.GetAccount(Convert.ToInt32(at_idBox.Text));
+                var toaccount = _controller.GetAccount(Convert.ToInt32(comboBox1.SelectedItem));
+
+                fromaccount.Balance = d[0];
+                toaccount.Balance = d[1];
 
                 _controller.WriteBinaryDataAccount();
                 UpdateFormAccount();
-                //string a = comboBox1.SelectedItem.ToString();
-                //int ab = (Convert.ToInt32(a));
-                //_controller.accList.Find(p => p.Id == ab).Balance = 9.99m;
-                //_controller.WriteBinaryDataAccount();
-                //UpdateFormAccount();
+                at_balanceBox.Text = fromaccount.Balance.ToString();
+                at_balancebox2.Text = toaccount.Balance.ToString();
             }
+        }
+
+        private void at_transactiontypeCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (at_transactiontypeCombo.SelectedIndex == 3)
+            {
+                at_balancebox2.Visible = true;
+                label27.Visible = true;
+                outputaccLabel.Visible = true;
+                comboBox1.Visible = true;
+
+            }
+            else
+            {
+                at_balancebox2.Visible = false;
+                label27.Visible = false;
+                outputaccLabel.Visible = false;
+                comboBox1.Visible = false;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var toaccount = _controller.GetAccount(Convert.ToInt32(comboBox1.SelectedItem));
+            at_balancebox2.Text = toaccount.Balance.ToString();
         }
     }
 

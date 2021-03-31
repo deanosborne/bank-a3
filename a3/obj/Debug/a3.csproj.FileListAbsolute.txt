@@ -72,3 +72,4 @@ C:\Users\imdea\source\repos\bank-ass3\a3\obj\Debug\a3.csproj.CoreCompileInputs.c
 C:\Users\imdea\source\repos\bank-ass3\a3\obj\Debug\a3.csproj.CopyComplete
 C:\Users\imdea\source\repos\bank-ass3\a3\obj\Debug\a3.exe
 C:\Users\imdea\source\repos\bank-ass3\a3\obj\Debug\a3.pdb
+C:\Users\imdea\source\repos\bank-ass3\a3\obj\Debug\a3.Forms.Transfer.resources

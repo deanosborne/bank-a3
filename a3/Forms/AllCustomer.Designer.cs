@@ -52,6 +52,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.attab = new System.Windows.Forms.TabPage();
+            this.label27 = new System.Windows.Forms.Label();
+            this.at_balancebox2 = new System.Windows.Forms.TextBox();
+            this.outputaccLabel = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.at_balanceBox = new System.Windows.Forms.TextBox();
             this.at_amountBox = new System.Windows.Forms.TextBox();
@@ -105,7 +108,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.at_balanceBox2 = new System.Windows.Forms.TextBox();
             this.addatab.SuspendLayout();
             this.addctab.SuspendLayout();
             this.attab.SuspendLayout();
@@ -344,7 +346,9 @@
             // 
             // attab
             // 
-            this.attab.Controls.Add(this.at_balanceBox2);
+            this.attab.Controls.Add(this.label27);
+            this.attab.Controls.Add(this.at_balancebox2);
+            this.attab.Controls.Add(this.outputaccLabel);
             this.attab.Controls.Add(this.comboBox1);
             this.attab.Controls.Add(this.at_balanceBox);
             this.attab.Controls.Add(this.at_amountBox);
@@ -366,31 +370,61 @@
             this.attab.Text = "Account Transactions";
             this.attab.UseVisualStyleBackColor = true;
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(587, 310);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(106, 13);
+            this.label27.TabIndex = 68;
+            this.label27.Text = "To account balance:";
+            this.label27.Visible = false;
+            // 
+            // at_balancebox2
+            // 
+            this.at_balancebox2.Location = new System.Drawing.Point(590, 326);
+            this.at_balancebox2.Name = "at_balancebox2";
+            this.at_balancebox2.Size = new System.Drawing.Size(238, 20);
+            this.at_balancebox2.TabIndex = 67;
+            this.at_balancebox2.Visible = false;
+            // 
+            // outputaccLabel
+            // 
+            this.outputaccLabel.AutoSize = true;
+            this.outputaccLabel.Location = new System.Drawing.Point(587, 264);
+            this.outputaccLabel.Name = "outputaccLabel";
+            this.outputaccLabel.Size = new System.Drawing.Size(61, 13);
+            this.outputaccLabel.TabIndex = 66;
+            this.outputaccLabel.Text = "Transfer to:";
+            this.outputaccLabel.Visible = false;
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(590, 33);
+            this.comboBox1.Location = new System.Drawing.Point(590, 280);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(238, 21);
             this.comboBox1.TabIndex = 64;
+            this.comboBox1.Visible = false;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // at_balanceBox
             // 
-            this.at_balanceBox.Location = new System.Drawing.Point(590, 359);
+            this.at_balanceBox.Location = new System.Drawing.Point(590, 381);
             this.at_balanceBox.Name = "at_balanceBox";
             this.at_balanceBox.Size = new System.Drawing.Size(238, 20);
             this.at_balanceBox.TabIndex = 62;
             // 
             // at_amountBox
             // 
-            this.at_amountBox.Location = new System.Drawing.Point(590, 283);
+            this.at_amountBox.Location = new System.Drawing.Point(590, 235);
             this.at_amountBox.Name = "at_amountBox";
             this.at_amountBox.Size = new System.Drawing.Size(238, 20);
             this.at_amountBox.TabIndex = 57;
             // 
             // at_typeBox
             // 
-            this.at_typeBox.Location = new System.Drawing.Point(590, 171);
+            this.at_typeBox.Location = new System.Drawing.Point(590, 145);
             this.at_typeBox.Name = "at_typeBox";
             this.at_typeBox.Size = new System.Drawing.Size(238, 20);
             this.at_typeBox.TabIndex = 51;
@@ -398,7 +432,7 @@
             // at_idBox
             // 
             this.at_idBox.Enabled = false;
-            this.at_idBox.Location = new System.Drawing.Point(590, 111);
+            this.at_idBox.Location = new System.Drawing.Point(590, 97);
             this.at_idBox.Name = "at_idBox";
             this.at_idBox.Size = new System.Drawing.Size(238, 20);
             this.at_idBox.TabIndex = 52;
@@ -414,15 +448,15 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(587, 343);
+            this.label26.Location = new System.Drawing.Point(587, 365);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(86, 13);
+            this.label26.Size = new System.Drawing.Size(129, 13);
             this.label26.TabIndex = 63;
-            this.label26.Text = "Current Balance:";
+            this.label26.Text = "Current Account Balance:";
             // 
             // at_backBtn
             // 
-            this.at_backBtn.Location = new System.Drawing.Point(753, 400);
+            this.at_backBtn.Location = new System.Drawing.Point(753, 410);
             this.at_backBtn.Name = "at_backBtn";
             this.at_backBtn.Size = new System.Drawing.Size(75, 23);
             this.at_backBtn.TabIndex = 61;
@@ -432,7 +466,7 @@
             // 
             // at_updateBtn
             // 
-            this.at_updateBtn.Location = new System.Drawing.Point(672, 400);
+            this.at_updateBtn.Location = new System.Drawing.Point(672, 410);
             this.at_updateBtn.Name = "at_updateBtn";
             this.at_updateBtn.Size = new System.Drawing.Size(75, 23);
             this.at_updateBtn.TabIndex = 60;
@@ -443,7 +477,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(587, 267);
+            this.label25.Location = new System.Drawing.Point(587, 219);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(46, 13);
             this.label25.TabIndex = 58;
@@ -452,7 +486,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(587, 211);
+            this.label24.Location = new System.Drawing.Point(587, 174);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(93, 13);
             this.label24.TabIndex = 56;
@@ -461,15 +495,16 @@
             // at_transactiontypeCombo
             // 
             this.at_transactiontypeCombo.FormattingEnabled = true;
-            this.at_transactiontypeCombo.Location = new System.Drawing.Point(590, 227);
+            this.at_transactiontypeCombo.Location = new System.Drawing.Point(590, 190);
             this.at_transactiontypeCombo.Name = "at_transactiontypeCombo";
             this.at_transactiontypeCombo.Size = new System.Drawing.Size(238, 21);
             this.at_transactiontypeCombo.TabIndex = 55;
+            this.at_transactiontypeCombo.SelectedIndexChanged += new System.EventHandler(this.at_transactiontypeCombo_SelectedIndexChanged);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(587, 155);
+            this.label22.Location = new System.Drawing.Point(587, 129);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(77, 13);
             this.label22.TabIndex = 53;
@@ -478,7 +513,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(587, 95);
+            this.label23.Location = new System.Drawing.Point(587, 81);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(66, 13);
             this.label23.TabIndex = 54;
@@ -881,13 +916,6 @@
             this.tabControl1.TabIndex = 16;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // at_balanceBox2
-            // 
-            this.at_balanceBox2.Location = new System.Drawing.Point(728, 60);
-            this.at_balanceBox2.Name = "at_balanceBox2";
-            this.at_balanceBox2.Size = new System.Drawing.Size(100, 20);
-            this.at_balanceBox2.TabIndex = 65;
-            // 
             // AllCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -965,7 +993,6 @@
         private System.Windows.Forms.TextBox ma_searchBox;
         private System.Windows.Forms.TextBox ma_feeBox;
         public System.Windows.Forms.TextBox ma_nameBox;
-        private Syncfusion.WinForms.DataGrid.SfDataGrid sfDataGrid_ma;
         private System.Windows.Forms.Button ma_deleteBtn;
         private System.Windows.Forms.Button ma_updateBtn;
         private System.Windows.Forms.Label label20;
@@ -988,13 +1015,16 @@
         private System.Windows.Forms.Button cm_updateBtn;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private Syncfusion.WinForms.DataGrid.SfDataGrid sfDataGrid_cm;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TextBox at_balanceBox2;
+        private System.Windows.Forms.Label outputaccLabel;
+        public Syncfusion.WinForms.DataGrid.SfDataGrid sfDataGrid_ma;
+        public Syncfusion.WinForms.DataGrid.SfDataGrid sfDataGrid_cm;
+        public System.Windows.Forms.TextBox at_balancebox2;
+        private System.Windows.Forms.Label label27;
     }
 }

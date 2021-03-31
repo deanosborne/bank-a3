@@ -34,23 +34,14 @@ namespace a3
 
         }
 
-        public void AddAccount(string name, int id)
+        public void AddAccount(string name, int id, decimal fee)
         {
-            accList.Add(new Account(name, id ));
-        }
-
-        public void EditAccount()
-        {
-
+            accList.Add(new Account(name, id, fee ));
         }
 
         public void AddCustomer(string name, string email, int phone, bool staff)
         {
             custList.Add(new Customer(name, email, phone, staff));
-        }
-        public void EditCustomer()
-        {
-
         }
 
         public Customer RemoveCustomer(int id)
@@ -126,16 +117,18 @@ namespace a3
                 return balance;
             //}
         }
-        public Account GetAccount(int ownerId)
+        public Account GetAccount(int id)
         {
-            Account account = accList.Where(x => x.Id == ownerId).FirstOrDefault();
-
-            if (account == null)
-            {
-                throw new ApplicationException("no account exists with that id");
-            }
+            Account account = accList.Find(p => p.Id == id);
 
             return account;
+        }
+
+        public Customer GetCustomer(int id)
+        {
+            Customer customer = custList.Find(p => p.Id == id);
+
+            return customer;
         }
         public decimal[] Transfer(decimal amount, int id1, int id2)
         {
@@ -153,8 +146,8 @@ namespace a3
             }
             else
             {
-                Account fromAccount = accList.Find(p => p.Id == id1);
-                Account toAccount = accList.Find(p => p.Id == id2);
+                Account fromAccount = GetAccount(id1);
+                Account toAccount = GetAccount(id2);
 
                 decimal[] rect = new decimal[2];
                 decimal balance1 = fromAccount.Balance -= amount;

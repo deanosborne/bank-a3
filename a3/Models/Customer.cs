@@ -25,7 +25,6 @@ namespace a3.Models
             SingletonDataCustomer.getInstance();
             this.Id = SingletonDataCustomer.NextId;
             this.Name = name;
-            
             this.Phone = phone;
             this.Staff = staff;
             this.Email = email;
