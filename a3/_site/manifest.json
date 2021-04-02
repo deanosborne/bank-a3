@@ -1,0 +1,366 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/imdea/source/repos/bank-ass3/a3",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "u/f6dUnzmGf2CzzQouh59A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "kHOaym7vPdodGmnPfWC4mA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "4M1qvufLfzBar/F4FwuX3A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Controller.InsufficientBalanceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Controller.InsufficientBalanceException.html",
+          "hash": "nV3VGiJDeAzLk08wUmIJFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Controller.InsufficientFundsException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Controller.InsufficientFundsException.html",
+          "hash": "8XLSPO6soeU7FIzLVSGxiA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Controller.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Controller.html",
+          "hash": "mHbAoxwfdz/ROZL3tt96aA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Form1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Form1.html",
+          "hash": "D2q4nby3CJOb7ykqW5qjQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Forms.AllCustomer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Forms.AllCustomer.html",
+          "hash": "j1CjMq1BeWQTANekUPzthw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Forms.BlankForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Forms.BlankForm.html",
+          "hash": "2qALPlhK8KRJBzKpN/IKSg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Forms.HomePage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Forms.HomePage.html",
+          "hash": "ahZhtyABNkrhhwEbJOypGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Forms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Forms.html",
+          "hash": "Dhiwf3Zrk4YYPwVMOCtXcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Helper.SingletonDataAccount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Helper.SingletonDataAccount.html",
+          "hash": "n54REtMfzVxusCtzZJDFoA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Helper.SingletonDataCustomer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Helper.SingletonDataCustomer.html",
+          "hash": "xHFV4e2E85/SJXO/zzh1oQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Helper.html",
+          "hash": "wa6gvNMBNvbGGDw+iEJ+5w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Login.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Login.html",
+          "hash": "69V7UKtY5NcNbSArEMKy8w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Models.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Models.Account.html",
+          "hash": "vnLLJrBvQvLYMGIOgcH8vg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Models.Customer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Models.Customer.html",
+          "hash": "aycZy6aluXj4hghC1qBR5w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Models.Everyday.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Models.Everyday.html",
+          "hash": "SRYHszCcmP27kR4YDa+MRQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Models.Lifestyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Models.Lifestyle.html",
+          "hash": "g9W9GhMAenwZiVBxIAEjPg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Models.Omni.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Models.Omni.html",
+          "hash": "dxerjbrq6XTTkIrcZ3DX/g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Models.Staff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Models.Staff.html",
+          "hash": "7UZixkLPmoO3icZVwtbEaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.Models.html",
+          "hash": "v7MIwGe9zjfy3qZOIAZd7g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/a3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/a3.html",
+          "hash": "OnlvaEj42DlTYkhIPRGloQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "rcSb81Y6I3XxoxsECrcouw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "G2AoE5T/2VarbHvzLEo4TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 20,
+          "skipped_file_count": 19
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

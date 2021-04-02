@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: a3
+  commentId: N:a3
+  id: a3
+  children:
+  - a3.Controller
+  - a3.Controller.InsufficientBalanceException
+  - a3.Controller.InsufficientFundsException
+  - a3.Form1
+  - a3.Login
+  langs:
+  - csharp
+  - vb
+  name: a3
+  nameWithType: a3
+  fullName: a3
+  type: Namespace
+  assemblies:
+  - a3
+references:
+- uid: a3.Controller
+  commentId: T:a3.Controller
+  name: Controller
+  nameWithType: Controller
+  fullName: a3.Controller
+- uid: a3.Controller.InsufficientFundsException
+  commentId: T:a3.Controller.InsufficientFundsException
+  name: Controller.InsufficientFundsException
+  nameWithType: Controller.InsufficientFundsException
+  fullName: a3.Controller.InsufficientFundsException
+- uid: a3.Controller.InsufficientBalanceException
+  commentId: T:a3.Controller.InsufficientBalanceException
+  name: Controller.InsufficientBalanceException
+  nameWithType: Controller.InsufficientBalanceException
+  fullName: a3.Controller.InsufficientBalanceException
+- uid: a3.Form1
+  commentId: T:a3.Form1
+  parent: a3
+  name: Form1
+  nameWithType: Form1
+  fullName: a3.Form1
+- uid: a3.Login
+  commentId: T:a3.Login
+  name: Login
+  nameWithType: Login
+  fullName: a3.Login
+- uid: a3
+  commentId: N:a3
+  name: a3
+  nameWithType: a3
+  fullName: a3

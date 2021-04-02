@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: a3.Models
+  commentId: N:a3.Models
+  id: a3.Models
+  children:
+  - a3.Models.Account
+  - a3.Models.Customer
+  - a3.Models.Everyday
+  - a3.Models.Lifestyle
+  - a3.Models.Omni
+  - a3.Models.Staff
+  langs:
+  - csharp
+  - vb
+  name: a3.Models
+  nameWithType: a3.Models
+  fullName: a3.Models
+  type: Namespace
+  assemblies:
+  - a3
+references:
+- uid: a3.Models.Account
+  commentId: T:a3.Models.Account
+  parent: a3.Models
+  name: Account
+  nameWithType: Account
+  fullName: a3.Models.Account
+- uid: a3.Models.Customer
+  commentId: T:a3.Models.Customer
+  parent: a3.Models
+  name: Customer
+  nameWithType: Customer
+  fullName: a3.Models.Customer
+- uid: a3.Models.Staff
+  commentId: T:a3.Models.Staff
+  name: Staff
+  nameWithType: Staff
+  fullName: a3.Models.Staff
+- uid: a3.Models.Everyday
+  commentId: T:a3.Models.Everyday
+  name: Everyday
+  nameWithType: Everyday
+  fullName: a3.Models.Everyday
+- uid: a3.Models.Lifestyle
+  commentId: T:a3.Models.Lifestyle
+  name: Lifestyle
+  nameWithType: Lifestyle
+  fullName: a3.Models.Lifestyle
+- uid: a3.Models.Omni
+  commentId: T:a3.Models.Omni
+  name: Omni
+  nameWithType: Omni
+  fullName: a3.Models.Omni
+- uid: a3.Models
+  commentId: N:a3.Models
+  name: a3.Models
+  nameWithType: a3.Models
+  fullName: a3.Models

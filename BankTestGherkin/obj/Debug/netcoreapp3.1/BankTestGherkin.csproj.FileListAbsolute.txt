@@ -247,7 +247,6 @@ C:\Users\imdea\source\repos\bank-ass3\BankTestGherkin\bin\Debug\netcoreapp3.1\zh
 C:\Users\imdea\source\repos\bank-ass3\BankTestGherkin\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\imdea\source\repos\bank-ass3\BankTestGherkin\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\imdea\source\repos\bank-ass3\BankTestGherkin\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\imdea\source\repos\bank-ass3\BankTestGherkin\obj\Debug\netcoreapp3.1\BankTestGherkin.csprojAssemblyReference.cache
 C:\Users\imdea\source\repos\bank-ass3\BankTestGherkin\obj\Debug\netcoreapp3.1\BankTestGherkin.AssemblyInfoInputs.cache
 C:\Users\imdea\source\repos\bank-ass3\BankTestGherkin\obj\Debug\netcoreapp3.1\BankTestGherkin.AssemblyInfo.cs
 C:\Users\imdea\source\repos\bank-ass3\BankTestGherkin\obj\Debug\netcoreapp3.1\BankTestGherkin.csproj.CoreCompileInputs.cache

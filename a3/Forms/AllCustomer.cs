@@ -22,13 +22,20 @@ namespace a3.Forms
 {
     public partial class AllCustomer : Form1
     {
+        #region instantiation
         Controller _controller = new Controller();
         Omni o = new Omni();
+        Everyday ev = new Everyday();
+        Lifestyle l = new Lifestyle();
         Account a = new Account();
+
+        #endregion
 
         public AllCustomer()
         {
             InitializeComponent();
+
+            #region sfdatagrid & combobox variables
             this.sfDataGrid_cm.AllowSorting = true;
             this.sfDataGrid_cm.AllowEditing = false;
             this.sfDataGrid_cm.AllowDeleting = true;
@@ -39,8 +46,8 @@ namespace a3.Forms
             newacc_typeBox.DisplayMember = "Text";
             newacc_typeBox.ValueMember = "Value";
             newacc_typeBox.Items.Add(new { Text = "Omni", Value = "Omni" });
-            newacc_typeBox.Items.Add(new { Text = "Free", Value = "Free" });
-            newacc_typeBox.Items.Add(new { Text = "Lifestyle", Value = "Lifestyle" });
+            newacc_typeBox.Items.Add(new { Text = "Investment", Value = "Investment" });
+            newacc_typeBox.Items.Add(new { Text = "Everyday", Value = "Everyday" });
 
             at_transactiontypeCombo.DisplayMember = "Text";
             at_transactiontypeCombo.ValueMember = "Value";
@@ -49,8 +56,7 @@ namespace a3.Forms
             at_transactiontypeCombo.Items.Add(new { Text = "Add interest", Value = "Add interest" });
             at_transactiontypeCombo.Items.Add(new { Text = "Transfer", Value = "Transfer" });
 
-            
-
+            #endregion
 
         }
 
@@ -58,10 +64,10 @@ namespace a3.Forms
         {
             UpdateForm();
             UpdateFormAccount();
-            //_controller.WriteBinaryData();
-            //_controller.WriteBinaryDataAccount();
+            //UpdateFormTransaction();
         }
 
+        #region form updates
         public void UpdateForm()
         {
             Read();
@@ -102,7 +108,7 @@ namespace a3.Forms
             stream.Close();
         }
 
-        //account
+
         public void ReadAccount()
         {
             IFormatter formatter = new BinaryFormatter();
@@ -110,9 +116,9 @@ namespace a3.Forms
             FileShare.Read);
             _controller.accList = (List<Account>)formatter.Deserialize(stream);
             SingletonDataAccount.setInstance((SingletonDataAccount)formatter.Deserialize(stream));
-            SingletonDataTransaction.setInstance((SingletonDataTransaction)formatter.Deserialize(stream));
             stream.Close();
         }
+        #endregion
 
         #region Customer forms
         private void cm_searchTxt_TextChanged(object sender, EventArgs e)
@@ -157,29 +163,6 @@ namespace a3.Forms
 
         }
 
-        #endregion
-
-
-        #region New customer form
-        private void newcust_comfirmBtn_Click(object sender, EventArgs e)
-        {
-            bool staff;
-            if (newcust_staffTrue.Checked)
-            {
-                staff = true;
-            }
-            else
-            {
-                staff = false;
-            }
-            _controller.AddCustomer(newcust_nameBox.Text, newcust_emailBox.Text, Convert.ToInt32(newcust_phoneBox.Text), staff);
-            _controller.WriteBinaryData();
-            UpdateForm();
-            tabControl1.SelectedIndex = 0;
-        }
-
-        #endregion
-
         private void cm_updateBtn_Click(object sender, EventArgs e)
         {
             bool radio;
@@ -201,16 +184,6 @@ namespace a3.Forms
             UpdateForm();
         }
 
-        private void sfDataGrid_cm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sfDataGrid_cm_CellDoubleClick(object sender, CellClickEventArgs e)
-        {
-
-        }
-
         private void cm_deleteBtn_Click(object sender, EventArgs e)
         {
             var custInfo = this.sfDataGrid_cm.CurrentItem as Customer;
@@ -218,6 +191,35 @@ namespace a3.Forms
             _controller.WriteBinaryData();
             UpdateForm();
         }
+
+        private void cm_toaccountBtn_Click(object sender, EventArgs e)
+        {
+            UpdateFormAccount();
+            tabControl1.SelectedIndex = 1;
+        }
+
+
+        #endregion
+
+        #region New customer form
+        private void newcust_comfirmBtn_Click(object sender, EventArgs e)
+        {
+            bool staff;
+            if (newcust_staffTrue.Checked)
+            {
+                staff = true;
+            }
+            else
+            {
+                staff = false;
+            }
+            _controller.AddCustomer(newcust_nameBox.Text, newcust_emailBox.Text, Convert.ToInt32(newcust_phoneBox.Text), staff);
+            _controller.WriteBinaryData();
+            UpdateForm();
+            tabControl1.SelectedIndex = 0;
+        }
+
+        #endregion
 
         #region new account
 
@@ -249,6 +251,16 @@ namespace a3.Forms
                 newacc_feeBox.Text = String.Format("{0:C}", o.fee);
                 newacc_interestBox.Text = String.Format("{0:P2}.", o.interest);
             }
+            else if (newacc_typeBox.SelectedIndex == 1)
+            {
+                newacc_feeBox.Text = String.Format("{0:C}", ev.fee);
+                newacc_interestBox.Text = String.Format("{0:P2}.", ev.interest);
+            }
+            else if (newacc_typeBox.SelectedIndex == 2)
+            {
+                newacc_feeBox.Text = String.Format("{0:C}", l.fee);
+                newacc_interestBox.Text = String.Format("{0:P2}.", l.interest);
+            }
         }
 
         private void newacc_typeBox_SelectedValueChanged(object sender, EventArgs e)
@@ -258,12 +270,12 @@ namespace a3.Forms
 
         #endregion
 
-        private void cm_toaccountBtn_Click(object sender, EventArgs e)
-        {
-            UpdateFormAccount();
-            tabControl1.SelectedIndex = 1;
-        }
+        #region account management form
 
+        private void ma_searchBox_TextChanged(object sender, EventArgs e)
+        {
+            this.sfDataGrid_ma.SearchController.Search(this.ma_searchBox.Text);
+        }
         private void SfDataGrid_ma_CellClick(object sender, Syncfusion.WinForms.DataGrid.Events.CellClickEventArgs e)
         {
             if (e.DataRow.RowType == RowType.DefaultRow)
@@ -295,31 +307,6 @@ namespace a3.Forms
 
         }
 
-        #region Transactions
-
-        #endregion
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedIndex == 2 && this.sfDataGrid_ma.CurrentItem != null)
-            {
-                var accInfo = this.sfDataGrid_ma.CurrentItem as Account;
-                at_idBox.Text = accInfo.Id.ToString();
-                at_typeBox.Text = accInfo.Name.ToString();
-                at_balanceBox.Text = accInfo.Balance.ToString();
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 2;
-        }
-
-        private void at_backBtn_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 1;
-        }
-
         private void ma_deleteBtn_Click(object sender, EventArgs e)
         {
             var accInfo = this.sfDataGrid_ma.CurrentItem as Account;
@@ -328,7 +315,30 @@ namespace a3.Forms
             UpdateFormAccount();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+        }
 
+        #endregion
+
+        #region Transactions
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 2 && this.sfDataGrid_ma.CurrentItem != null)
+            {
+                var accInfo = this.sfDataGrid_ma.CurrentItem as Account;
+                at_idBox.Text = accInfo.Id.ToString();
+                at_typeBox.Text = accInfo.Name.ToString();
+                at_balanceBox.Text = accInfo.Balance.ToString();
+                at_outputBox.Text = _controller.AccountInfo(accInfo.Name, Convert.ToDecimal(accInfo.Balance));
+            }
+        }
+
+        private void at_backBtn_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
 
         private void at_updateBtn_Click(object sender, EventArgs e)
         {
@@ -343,6 +353,7 @@ namespace a3.Forms
                 this.sfDataGrid_cm.SearchController.Search(at_idBox.Text);
                 SetSelectedItem();
                 _controller.WriteBinaryDataAccount();
+                at_outputBox.Text += _controller.WithdrawInfo(Convert.ToDecimal(at_amountBox.Text), accInfo.Name, Convert.ToDecimal(accInfo.Balance));
             }
 
             //deposit
@@ -355,6 +366,7 @@ namespace a3.Forms
                 this.sfDataGrid_cm.SearchController.Search(at_idBox.Text);
                 SetSelectedItem();
                 _controller.WriteBinaryDataAccount();
+                at_outputBox.Text += _controller.DepositInfo(Convert.ToDecimal(at_amountBox.Text), accInfo.Name, Convert.ToDecimal(accInfo.Balance));
             }
             //interest
             if (at_transactiontypeCombo.SelectedIndex == 2)
@@ -366,11 +378,12 @@ namespace a3.Forms
                 this.sfDataGrid_cm.SearchController.Search(at_idBox.Text);
                 SetSelectedItem();
                 _controller.WriteBinaryDataAccount();
+                at_outputBox.Text += _controller.InterestInfo(accInfo.Name, Convert.ToDecimal(accInfo.Balance));
             }
             //transfer
             if (at_transactiontypeCombo.SelectedIndex == 3)
             {
-                
+
                 decimal[] d = _controller.Transfer(Convert.ToDecimal(at_amountBox.Text), Convert.ToInt32(at_idBox.Text), Convert.ToInt32(comboBox1.SelectedItem));
                 var fromaccount = _controller.GetAccount(Convert.ToInt32(at_idBox.Text));
                 var toaccount = _controller.GetAccount(Convert.ToInt32(comboBox1.SelectedItem));
@@ -382,6 +395,8 @@ namespace a3.Forms
                 UpdateFormAccount();
                 at_balanceBox.Text = fromaccount.Balance.ToString();
                 at_balancebox2.Text = toaccount.Balance.ToString();
+                at_outputBox.Text += _controller.TransferInfo(fromaccount.Name, toaccount.Name, 
+                    fromaccount.Id, toaccount.Id, Convert.ToDecimal(at_amountBox.Text), Convert.ToDecimal(fromaccount.Balance), Convert.ToDecimal(toaccount.Balance));
             }
         }
 
@@ -409,6 +424,9 @@ namespace a3.Forms
             var toaccount = _controller.GetAccount(Convert.ToInt32(comboBox1.SelectedItem));
             at_balancebox2.Text = toaccount.Balance.ToString();
         }
+        #endregion
+
+
     }
 
 }

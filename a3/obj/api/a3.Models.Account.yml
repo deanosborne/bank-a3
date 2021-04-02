@@ -1,0 +1,661 @@
+### YamlMime:ManagedReference
+items:
+- uid: a3.Models.Account
+  commentId: T:a3.Models.Account
+  id: Account
+  parent: a3.Models
+  children:
+  - a3.Models.Account.#ctor
+  - a3.Models.Account.#ctor(System.String,System.Int32,System.Decimal)
+  - a3.Models.Account.Balance
+  - a3.Models.Account.CustomerId
+  - a3.Models.Account.Fee
+  - a3.Models.Account.Id
+  - a3.Models.Account.Interest
+  - a3.Models.Account.Name
+  langs:
+  - csharp
+  - vb
+  name: Account
+  nameWithType: Account
+  fullName: a3.Models.Account
+  type: Class
+  source:
+    id: Account
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Account.cs
+    startLine: 10
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Account
+    content.vb: >-
+      <Serializable>
+
+      Public Class Account
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - a3.Models.Everyday
+  - a3.Models.Lifestyle
+  - a3.Models.Omni
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: a3.Models.Account.#ctor(System.String,System.Int32,System.Decimal)
+  commentId: M:a3.Models.Account.#ctor(System.String,System.Int32,System.Decimal)
+  id: '#ctor(System.String,System.Int32,System.Decimal)'
+  parent: a3.Models.Account
+  langs:
+  - csharp
+  - vb
+  name: Account(String, Int32, Decimal)
+  nameWithType: Account.Account(String, Int32, Decimal)
+  fullName: a3.Models.Account.Account(System.String, System.Int32, System.Decimal)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Account.cs
+    startLine: 21
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public Account(string name, int id, decimal fee)
+    parameters:
+    - id: name
+      type: System.String
+    - id: id
+      type: System.Int32
+    - id: fee
+      type: System.Decimal
+    content.vb: Public Sub New(name As String, id As Integer, fee As Decimal)
+  overload: a3.Models.Account.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Account.#ctor
+  commentId: M:a3.Models.Account.#ctor
+  id: '#ctor'
+  parent: a3.Models.Account
+  langs:
+  - csharp
+  - vb
+  name: Account()
+  nameWithType: Account.Account()
+  fullName: a3.Models.Account.Account()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Account.cs
+    startLine: 32
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public Account()
+    content.vb: Public Sub New
+  overload: a3.Models.Account.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Account.Id
+  commentId: P:a3.Models.Account.Id
+  id: Id
+  parent: a3.Models.Account
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Account.Id
+  fullName: a3.Models.Account.Id
+  type: Property
+  source:
+    id: Id
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Account.cs
+    startLine: 40
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: a3.Models.Account.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Account.Name
+  commentId: P:a3.Models.Account.Name
+  id: Name
+  parent: a3.Models.Account
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Account.Name
+  fullName: a3.Models.Account.Name
+  type: Property
+  source:
+    id: Name
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Account.cs
+    startLine: 46
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: a3.Models.Account.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Account.CustomerId
+  commentId: P:a3.Models.Account.CustomerId
+  id: CustomerId
+  parent: a3.Models.Account
+  langs:
+  - csharp
+  - vb
+  name: CustomerId
+  nameWithType: Account.CustomerId
+  fullName: a3.Models.Account.CustomerId
+  type: Property
+  source:
+    id: CustomerId
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Account.cs
+    startLine: 52
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public int CustomerId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CustomerId As Integer
+  overload: a3.Models.Account.CustomerId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Account.Fee
+  commentId: P:a3.Models.Account.Fee
+  id: Fee
+  parent: a3.Models.Account
+  langs:
+  - csharp
+  - vb
+  name: Fee
+  nameWithType: Account.Fee
+  fullName: a3.Models.Account.Fee
+  type: Property
+  source:
+    id: Fee
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Account.cs
+    startLine: 57
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public decimal Fee { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property Fee As Decimal
+  overload: a3.Models.Account.Fee*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Account.Interest
+  commentId: P:a3.Models.Account.Interest
+  id: Interest
+  parent: a3.Models.Account
+  langs:
+  - csharp
+  - vb
+  name: Interest
+  nameWithType: Account.Interest
+  fullName: a3.Models.Account.Interest
+  type: Property
+  source:
+    id: Interest
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Account.cs
+    startLine: 62
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public decimal Interest { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property Interest As Decimal
+  overload: a3.Models.Account.Interest*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Account.Balance
+  commentId: P:a3.Models.Account.Balance
+  id: Balance
+  parent: a3.Models.Account
+  langs:
+  - csharp
+  - vb
+  name: Balance
+  nameWithType: Account.Balance
+  fullName: a3.Models.Account.Balance
+  type: Property
+  source:
+    id: Balance
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Account.cs
+    startLine: 68
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public decimal Balance { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property Balance As Decimal
+  overload: a3.Models.Account.Balance*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: a3.Models
+  commentId: N:a3.Models
+  name: a3.Models
+  nameWithType: a3.Models
+  fullName: a3.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: a3.Models.Account.#ctor*
+  commentId: Overload:a3.Models.Account.#ctor
+  name: Account
+  nameWithType: Account.Account
+  fullName: a3.Models.Account.Account
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: a3.Models.Account.Id*
+  commentId: Overload:a3.Models.Account.Id
+  name: Id
+  nameWithType: Account.Id
+  fullName: a3.Models.Account.Id
+- uid: a3.Models.Account.Name*
+  commentId: Overload:a3.Models.Account.Name
+  name: Name
+  nameWithType: Account.Name
+  fullName: a3.Models.Account.Name
+- uid: a3.Models.Account.CustomerId*
+  commentId: Overload:a3.Models.Account.CustomerId
+  name: CustomerId
+  nameWithType: Account.CustomerId
+  fullName: a3.Models.Account.CustomerId
+- uid: a3.Models.Account.Fee*
+  commentId: Overload:a3.Models.Account.Fee
+  name: Fee
+  nameWithType: Account.Fee
+  fullName: a3.Models.Account.Fee
+- uid: a3.Models.Account.Interest*
+  commentId: Overload:a3.Models.Account.Interest
+  name: Interest
+  nameWithType: Account.Interest
+  fullName: a3.Models.Account.Interest
+- uid: a3.Models.Account.Balance*
+  commentId: Overload:a3.Models.Account.Balance
+  name: Balance
+  nameWithType: Account.Balance
+  fullName: a3.Models.Account.Balance

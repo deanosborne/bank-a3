@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: a3.Forms
+  commentId: N:a3.Forms
+  id: a3.Forms
+  children:
+  - a3.Forms.AllCustomer
+  - a3.Forms.BlankForm
+  - a3.Forms.HomePage
+  langs:
+  - csharp
+  - vb
+  name: a3.Forms
+  nameWithType: a3.Forms
+  fullName: a3.Forms
+  type: Namespace
+  assemblies:
+  - a3
+references:
+- uid: a3.Forms.AllCustomer
+  commentId: T:a3.Forms.AllCustomer
+  name: AllCustomer
+  nameWithType: AllCustomer
+  fullName: a3.Forms.AllCustomer
+- uid: a3.Forms.BlankForm
+  commentId: T:a3.Forms.BlankForm
+  parent: a3.Forms
+  name: BlankForm
+  nameWithType: BlankForm
+  fullName: a3.Forms.BlankForm
+- uid: a3.Forms.HomePage
+  commentId: T:a3.Forms.HomePage
+  name: HomePage
+  nameWithType: HomePage
+  fullName: a3.Forms.HomePage
+- uid: a3.Forms
+  commentId: N:a3.Forms
+  name: a3.Forms
+  nameWithType: a3.Forms
+  fullName: a3.Forms

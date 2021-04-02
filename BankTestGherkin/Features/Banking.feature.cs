@@ -100,14 +100,20 @@ Link to a feature: [Calculator](BankTestGherkin/Features/Banking.feature)
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers", new string[] {
-                "mytag"}, SourceLine=19)]
-        public virtual void AddTwoNumbers()
+        public virtual void TransferAccTypes(string name, string amount, string type, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "mytag"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            argumentsOfScenario.Add("name", name);
+            argumentsOfScenario.Add("amount", amount);
+            argumentsOfScenario.Add("type", type);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Transfer acc types", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -129,19 +135,345 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 21
- testRunner.Given("the first number is 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given(string.Format("account {0} is selected", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 22
- testRunner.And("the second number is 70", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.When(string.Format("I transfer {0} to {1}", amount, type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 23
- testRunner.When("the two numbers are added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 24
- testRunner.Then("the result should be 120", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then(string.Format("{0} is transferred to", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer acc types, Variant 0", new string[] {
+                "mytag"}, SourceLine=26)]
+        public virtual void TransferAccTypes_Variant0()
+        {
+#line 20
+this.TransferAccTypes("Omni", "400", "Lifestyle", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer acc types, Variant 1", new string[] {
+                "mytag"}, SourceLine=26)]
+        public virtual void TransferAccTypes_Variant1()
+        {
+#line 20
+this.TransferAccTypes("Lifestyle", "100", "Everyday", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer acc types, Variant 2", new string[] {
+                "mytag"}, SourceLine=26)]
+        public virtual void TransferAccTypes_Variant2()
+        {
+#line 20
+this.TransferAccTypes("Everyday", "10", "Omni", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer acc types, Variant 3", new string[] {
+                "mytag"}, SourceLine=26)]
+        public virtual void TransferAccTypes_Variant3()
+        {
+#line 20
+this.TransferAccTypes("Omni", "400", "Omni", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer acc types, Variant 4", new string[] {
+                "mytag"}, SourceLine=26)]
+        public virtual void TransferAccTypes_Variant4()
+        {
+#line 20
+this.TransferAccTypes("Lifestyle", "100", "Lifestyle", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer acc types, Variant 5", new string[] {
+                "mytag"}, SourceLine=26)]
+        public virtual void TransferAccTypes_Variant5()
+        {
+#line 20
+this.TransferAccTypes("Everyday", "10", "Everyday", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void TransferBalances(string name, string amount, string type, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "mytag"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("name", name);
+            argumentsOfScenario.Add("amount", amount);
+            argumentsOfScenario.Add("type", type);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Transfer balances", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 35
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 36
+  testRunner.Given(string.Format("account {0} is selected", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 37
+  testRunner.When(string.Format("I transfer {0} to {1}", amount, type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 38
+  testRunner.Then(string.Format("{0} is transferred to", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer balances, Variant 0", new string[] {
+                "mytag"}, SourceLine=41)]
+        public virtual void TransferBalances_Variant0()
+        {
+#line 35
+this.TransferBalances("Omni", "400", "Lifestyle", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer balances, Variant 1", new string[] {
+                "mytag"}, SourceLine=41)]
+        public virtual void TransferBalances_Variant1()
+        {
+#line 35
+this.TransferBalances("Lifestyle", "100", "Everyday", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer balances, Variant 2", new string[] {
+                "mytag"}, SourceLine=41)]
+        public virtual void TransferBalances_Variant2()
+        {
+#line 35
+this.TransferBalances("Everyday", "10", "Omni", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer balances, Variant 3", new string[] {
+                "mytag"}, SourceLine=41)]
+        public virtual void TransferBalances_Variant3()
+        {
+#line 35
+this.TransferBalances("Omni", "0", "Everyday", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer balances, Variant 4", new string[] {
+                "mytag"}, SourceLine=41)]
+        public virtual void TransferBalances_Variant4()
+        {
+#line 35
+this.TransferBalances("Lifestyle", "0", "Omni", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer balances, Variant 5", new string[] {
+                "mytag"}, SourceLine=41)]
+        public virtual void TransferBalances_Variant5()
+        {
+#line 35
+this.TransferBalances("Everyday", "0", "Lifestyle", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void TransferOverdrafts(string staff, string amount, string balance, string fee, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "mytag"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("staff", staff);
+            argumentsOfScenario.Add("amount", amount);
+            argumentsOfScenario.Add("balance", balance);
+            argumentsOfScenario.Add("fee", fee);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Transfer overdrafts", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 50
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 51
+  testRunner.Given(string.Format("customer is not {0}", staff), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 52
+  testRunner.When(string.Format("{0} transferred is more than {1}", amount, balance), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 53
+  testRunner.Then(string.Format("the account is charged a {0}", fee), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 54
+  testRunner.And(string.Format("the {0} should be withdrawn from the {1}", fee, balance), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer overdrafts, Variant 0", new string[] {
+                "mytag"}, SourceLine=57)]
+        public virtual void TransferOverdrafts_Variant0()
+        {
+#line 50
+this.TransferOverdrafts("false", "100", "0", "5", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer overdrafts, Variant 1", new string[] {
+                "mytag"}, SourceLine=57)]
+        public virtual void TransferOverdrafts_Variant1()
+        {
+#line 50
+this.TransferOverdrafts("false", "3", "4", "5", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer overdrafts, Variant 2", new string[] {
+                "mytag"}, SourceLine=57)]
+        public virtual void TransferOverdrafts_Variant2()
+        {
+#line 50
+this.TransferOverdrafts("false", "5", "5", "10", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer overdrafts, Variant 3", new string[] {
+                "mytag"}, SourceLine=57)]
+        public virtual void TransferOverdrafts_Variant3()
+        {
+#line 50
+this.TransferOverdrafts("false", "44", "901", "5", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void TransferStaffFees(string staff, string amount, string balance, string fee, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "mytag"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("staff", staff);
+            argumentsOfScenario.Add("amount", amount);
+            argumentsOfScenario.Add("balance", balance);
+            argumentsOfScenario.Add("fee", fee);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Transfer staff fees", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 64
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 65
+  testRunner.Given(string.Format("customer is {0}", staff), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 66
+  testRunner.When(string.Format("{0} transferred is more than {1}", amount, balance), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 67
+  testRunner.Then(string.Format("the account is charged a {0}", fee), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 68
+  testRunner.And(string.Format("the {0} should be withdrawn from the {1}", fee, balance), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer staff fees, Variant 0", new string[] {
+                "mytag"}, SourceLine=71)]
+        public virtual void TransferStaffFees_Variant0()
+        {
+#line 64
+this.TransferStaffFees("true", "100", "0", "5", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer staff fees, Variant 1", new string[] {
+                "mytag"}, SourceLine=71)]
+        public virtual void TransferStaffFees_Variant1()
+        {
+#line 64
+this.TransferStaffFees("true", "3", "4", "5", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer staff fees, Variant 2", new string[] {
+                "mytag"}, SourceLine=71)]
+        public virtual void TransferStaffFees_Variant2()
+        {
+#line 64
+this.TransferStaffFees("true", "5", "5", "10", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Transfer staff fees, Variant 3", new string[] {
+                "mytag"}, SourceLine=71)]
+        public virtual void TransferStaffFees_Variant3()
+        {
+#line 64
+this.TransferStaffFees("true", "44", "901", "5", ((string[])(null)));
+#line hidden
         }
     }
 }

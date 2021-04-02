@@ -40,6 +40,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\a3.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -105,11 +106,11 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form2.cs">
+    <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\HomePage.cs">
       <SubType>Form</SubType>
@@ -117,18 +118,13 @@
     <Compile Include="Forms\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Transfer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Transfer.Designer.cs">
-      <DependentUpon>Transfer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Helper\SingletonDataTransaction.cs" />
     <Compile Include="Helper\SingletonDataAccount.cs" />
     <Compile Include="Helper\SingletonDataCustomer.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Everyday.cs" />
     <Compile Include="Models\Ihasfee.cs" />
+    <Compile Include="Models\Lifestyle.cs" />
     <Compile Include="Models\Omni.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -141,14 +137,11 @@
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Transfer.resx">
-      <DependentUpon>Transfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,6 +153,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="api\index.md" />
+    <None Include="articles\intro.md" />
+    <None Include="articles\toc.md" />
+    <None Include="docfx.json" />
+    <None Include="index.md" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\a3.models.Account.datasource" />
     <None Include="Properties\DataSources\a3.models.bankdbEntities.datasource" />
@@ -175,6 +173,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="toc.yml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -211,6 +210,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.targets'))" />
+    <Error Condition="!Exists('..\packages\docfx.console.2.56.7\build\docfx.console.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\docfx.console.2.56.7\build\docfx.console.targets'))" />
   </Target>
   <Import Project="..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.targets" Condition="Exists('..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.targets')" />
+  <Import Project="..\packages\docfx.console.2.56.7\build\docfx.console.targets" Condition="Exists('..\packages\docfx.console.2.56.7\build\docfx.console.targets')" />
 </Project>

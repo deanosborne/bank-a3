@@ -17,7 +17,7 @@ namespace a3.Models
         private decimal a_fee;
         private decimal a_interest;
         private decimal a_balance;
-        private List<Account> GetAccounts;
+        //private List<Account> GetAccounts;
 
         public Account(string name, int id, decimal fee)
         {
@@ -32,11 +32,11 @@ namespace a3.Models
 
         public Account() { }
 
-        public List<Account> _GetAccounts
-        {
-            get { return GetAccounts; }
-            set { GetAccounts = value; }
-        }
+        //public List<Account> _GetAccounts
+        //{
+        //    get { return GetAccounts; }
+        //    set { GetAccounts = value; }
+        //}
 
         public int Id
         {

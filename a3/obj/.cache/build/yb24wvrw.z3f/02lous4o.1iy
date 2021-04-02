@@ -1,0 +1,1041 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Controller
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Controller
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="a3.Controller">
+  
+  
+  <h1 id="a3_Controller" data-uid="a3.Controller" class="text-break">Class Controller
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Controller</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="a3.html">a3</a></h6>
+  <h6><strong>Assembly</strong>: a3.dll</h6>
+  <h5 id="a3_Controller_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Controller</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="a3_Controller__ctor_" data-uid="a3.Controller.#ctor*"></a>
+  <h4 id="a3_Controller__ctor" data-uid="a3.Controller.#ctor">Controller()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Controller()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="a3_Controller_accList" data-uid="a3.Controller.accList">accList</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Account&gt; accList</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="a3.Models.Account.html">Account</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="a3_Controller_custList" data-uid="a3.Controller.custList">custList</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Customer&gt; custList</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="a3.Models.Customer.html">Customer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="a3_Controller_AccountInfo_" data-uid="a3.Controller.AccountInfo*"></a>
+  <h4 id="a3_Controller_AccountInfo_System_String_System_Decimal_" data-uid="a3.Controller.AccountInfo(System.String,System.Decimal)">AccountInfo(String, Decimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string AccountInfo(string acctype, decimal balance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">acctype</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">balance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_AddAccount_" data-uid="a3.Controller.AddAccount*"></a>
+  <h4 id="a3_Controller_AddAccount_System_String_System_Int32_System_Decimal_" data-uid="a3.Controller.AddAccount(System.String,System.Int32,System.Decimal)">AddAccount(String, Int32, Decimal)</h4>
+  <div class="markdown level1 summary"><p>Adds a new account</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddAccount(string name, int id, decimal fee)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name to be added</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Id to be added</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">fee</span></td>
+        <td><p>Fee to be added</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_AddCustomer_" data-uid="a3.Controller.AddCustomer*"></a>
+  <h4 id="a3_Controller_AddCustomer_System_String_System_String_System_Int32_System_Boolean_" data-uid="a3.Controller.AddCustomer(System.String,System.String,System.Int32,System.Boolean)">AddCustomer(String, String, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Add a new customer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddCustomer(string name, string email, int phone, bool staff)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name to be added</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">email</span></td>
+        <td><p>Email to be added</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">phone</span></td>
+        <td><p>Phone number to be added</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">staff</span></td>
+        <td><p>Sets staff to true or false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_Deposit_" data-uid="a3.Controller.Deposit*"></a>
+  <h4 id="a3_Controller_Deposit_System_Decimal_System_Decimal_" data-uid="a3.Controller.Deposit(System.Decimal,System.Decimal)">Deposit(Decimal, Decimal)</h4>
+  <div class="markdown level1 summary"><p>Adds an amount to the balance. Throws exception if amount under 0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public decimal Deposit(decimal amount, decimal balance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td><p>Amount to be added to balance</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">balance</span></td>
+        <td><p>Balance before amount added</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><p>New balance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_DepositInfo_" data-uid="a3.Controller.DepositInfo*"></a>
+  <h4 id="a3_Controller_DepositInfo_System_Decimal_System_String_System_Decimal_" data-uid="a3.Controller.DepositInfo(System.Decimal,System.String,System.Decimal)">DepositInfo(Decimal, String, Decimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string DepositInfo(decimal amount, string acctype, decimal balance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">acctype</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">balance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_GetAccount_" data-uid="a3.Controller.GetAccount*"></a>
+  <h4 id="a3_Controller_GetAccount_System_Int32_" data-uid="a3.Controller.GetAccount(System.Int32)">GetAccount(Int32)</h4>
+  <div class="markdown level1 summary"><p>Compare id in controller account list</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Account GetAccount(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Id to be compared</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="a3.Models.Account.html">Account</a></td>
+        <td><p>Account details</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_GetCustomer_" data-uid="a3.Controller.GetCustomer*"></a>
+  <h4 id="a3_Controller_GetCustomer_System_Int32_" data-uid="a3.Controller.GetCustomer(System.Int32)">GetCustomer(Int32)</h4>
+  <div class="markdown level1 summary"><p>Compare id in controller customer list</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Customer GetCustomer(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Id to be compared</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="a3.Models.Customer.html">Customer</a></td>
+        <td><p>Customer details</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_Interest_" data-uid="a3.Controller.Interest*"></a>
+  <h4 id="a3_Controller_Interest_System_Decimal_System_Decimal_" data-uid="a3.Controller.Interest(System.Decimal,System.Decimal)">Interest(Decimal, Decimal)</h4>
+  <div class="markdown level1 summary"><p>Calculate interest and add to balance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public decimal Interest(decimal balance, decimal interest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">balance</span></td>
+        <td><p>Balance before calulated and added interest</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">interest</span></td>
+        <td><p>Interest percentage to be calculated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><p>New balance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_InterestInfo_" data-uid="a3.Controller.InterestInfo*"></a>
+  <h4 id="a3_Controller_InterestInfo_System_String_System_Decimal_" data-uid="a3.Controller.InterestInfo(System.String,System.Decimal)">InterestInfo(String, Decimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string InterestInfo(string acctype, decimal balance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">acctype</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">balance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_RemoveA_" data-uid="a3.Controller.RemoveA*"></a>
+  <h4 id="a3_Controller_RemoveA_System_Int32_" data-uid="a3.Controller.RemoveA(System.Int32)">RemoveA(Int32)</h4>
+  <div class="markdown level1 summary"><p>Removes account from acc list after comparing id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveA(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Id to be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_RemoveAccount_" data-uid="a3.Controller.RemoveAccount*"></a>
+  <h4 id="a3_Controller_RemoveAccount_System_Int32_" data-uid="a3.Controller.RemoveAccount(System.Int32)">RemoveAccount(Int32)</h4>
+  <div class="markdown level1 summary"><p>Find an account by id from the list in Controller</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Account RemoveAccount(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Id to be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="a3.Models.Account.html">Account</a></td>
+        <td><p>Id if customer is found when compared else returns null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_RemoveC_" data-uid="a3.Controller.RemoveC*"></a>
+  <h4 id="a3_Controller_RemoveC_System_Int32_" data-uid="a3.Controller.RemoveC(System.Int32)">RemoveC(Int32)</h4>
+  <div class="markdown level1 summary"><p>Removes customer from cust list after comparing id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveC(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Id to be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_RemoveCustomer_" data-uid="a3.Controller.RemoveCustomer*"></a>
+  <h4 id="a3_Controller_RemoveCustomer_System_Int32_" data-uid="a3.Controller.RemoveCustomer(System.Int32)">RemoveCustomer(Int32)</h4>
+  <div class="markdown level1 summary"><p>Find a customer by id from the list in Controller</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Customer RemoveCustomer(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Id to be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="a3.Models.Customer.html">Customer</a></td>
+        <td><p>Id if customer is found when compared else returns null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_Transfer_" data-uid="a3.Controller.Transfer*"></a>
+  <h4 id="a3_Controller_Transfer_System_Decimal_System_Int32_System_Int32_" data-uid="a3.Controller.Transfer(System.Decimal,System.Int32,System.Int32)">Transfer(Decimal, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Transfer of customer funds from one account to another</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public decimal[] Transfer(decimal amount, int id1, int id2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td><p>Amount to be transferred</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id1</span></td>
+        <td><p>To account</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id2</span></td>
+        <td><p>From account</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span>[]</td>
+        <td><p>To and from account balances called by index</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_TransferInfo_" data-uid="a3.Controller.TransferInfo*"></a>
+  <h4 id="a3_Controller_TransferInfo_System_String_System_String_System_Int32_System_Int32_System_Decimal_System_Decimal_System_Decimal_" data-uid="a3.Controller.TransferInfo(System.String,System.String,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal)">TransferInfo(String, String, Int32, Int32, Decimal, Decimal, Decimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string TransferInfo(string account1, string account2, int id1, int id2, decimal amount, decimal balance, decimal balance2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">account1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">account2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">balance</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">balance2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_Withdraw_" data-uid="a3.Controller.Withdraw*"></a>
+  <h4 id="a3_Controller_Withdraw_System_Decimal_System_Decimal_" data-uid="a3.Controller.Withdraw(System.Decimal,System.Decimal)">Withdraw(Decimal, Decimal)</h4>
+  <div class="markdown level1 summary"><p>Subtracts an amount to the balance. Throws exception if amount &gt; balance, charges defined fee</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public decimal Withdraw(decimal amount, decimal balance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td><p>Amount to be subtracted to balance</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">balance</span></td>
+        <td><p>Balance before amount subtracted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><p>New balance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_WithdrawInfo_" data-uid="a3.Controller.WithdrawInfo*"></a>
+  <h4 id="a3_Controller_WithdrawInfo_System_Decimal_System_String_System_Decimal_" data-uid="a3.Controller.WithdrawInfo(System.Decimal,System.String,System.Decimal)">WithdrawInfo(Decimal, String, Decimal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string WithdrawInfo(decimal amount, string acctype, decimal balance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">acctype</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">balance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="a3_Controller_WriteBinaryData_" data-uid="a3.Controller.WriteBinaryData*"></a>
+  <h4 id="a3_Controller_WriteBinaryData" data-uid="a3.Controller.WriteBinaryData">WriteBinaryData()</h4>
+  <div class="markdown level1 summary"><p>Writes Customer data to binary file, persists nextID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBinaryData()</code></pre>
+  </div>
+  
+  
+  <a id="a3_Controller_WriteBinaryDataAccount_" data-uid="a3.Controller.WriteBinaryDataAccount*"></a>
+  <h4 id="a3_Controller_WriteBinaryDataAccount" data-uid="a3.Controller.WriteBinaryDataAccount">WriteBinaryDataAccount()</h4>
+  <div class="markdown level1 summary"><p>Writes Account data to binary file, persists nextID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBinaryDataAccount()</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

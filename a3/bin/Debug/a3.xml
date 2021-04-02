@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>a3</name>
+    </assembly>
+    <members>
+        <member name="M:a3.Controller.AddAccount(System.String,System.Int32,System.Decimal)">
+            <summary>
+            Adds a new account
+            </summary>
+            <param name="name">Name to be added</param>
+            <param name="id">Id to be added</param>
+            <param name="fee">Fee to be added</param>
+        </member>
+        <member name="M:a3.Controller.AddCustomer(System.String,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Add a new customer
+            </summary>
+            <param name="name">Name to be added</param>
+            <param name="email">Email to be added</param>
+            <param name="phone">Phone number to be added</param>
+            <param name="staff">Sets staff to true or false</param>
+        </member>
+        <member name="M:a3.Controller.RemoveCustomer(System.Int32)">
+            <summary>
+            Find a customer by id from the list in Controller
+            </summary>
+            <param name="id">Id to be returned</param>
+            <returns>Id if customer is found when compared else returns null</returns>
+        </member>
+        <member name="M:a3.Controller.RemoveAccount(System.Int32)">
+            <summary>
+            Find an account by id from the list in Controller
+            </summary>
+            <param name="id">Id to be returned</param>
+            <returns>Id if customer is found when compared else returns null</returns>
+        </member>
+        <member name="M:a3.Controller.RemoveC(System.Int32)">
+            <summary>
+            Removes customer from cust list after comparing id
+            </summary>
+            <param name="id">Id to be returned</param>
+        </member>
+        <member name="M:a3.Controller.RemoveA(System.Int32)">
+            <summary>
+            Removes account from acc list after comparing id
+            </summary>
+            <param name="id">Id to be returned</param>
+        </member>
+        <member name="M:a3.Controller.Deposit(System.Decimal,System.Decimal)">
+            <summary>
+            Adds an amount to the balance. Throws exception if amount under 0
+            </summary>
+            <param name="amount">Amount to be added to balance</param>
+            <param name="balance">Balance before amount added</param>
+            <returns>New balance</returns>
+        </member>
+        <member name="M:a3.Controller.Withdraw(System.Decimal,System.Decimal)">
+            <summary>
+            Subtracts an amount to the balance. Throws exception if amount > balance, charges defined fee
+            </summary>
+            <param name="amount">Amount to be subtracted to balance</param>
+            <param name="balance">Balance before amount subtracted</param>
+            <returns>New balance</returns>
+        </member>
+        <member name="M:a3.Controller.Interest(System.Decimal,System.Decimal)">
+            <summary>
+            Calculate interest and add to balance
+            </summary>
+            <param name="balance">Balance before calulated and added interest</param>
+            <param name="interest">Interest percentage to be calculated</param>
+            <returns>New balance</returns>
+        </member>
+        <member name="M:a3.Controller.GetAccount(System.Int32)">
+            <summary>
+            Compare id in controller account list
+            </summary>
+            <param name="id">Id to be compared</param>
+            <returns>Account details</returns>
+        </member>
+        <member name="M:a3.Controller.GetCustomer(System.Int32)">
+            <summary>
+            Compare id in controller customer list
+            </summary>
+            <param name="id">Id to be compared</param>
+            <returns>Customer details</returns>
+        </member>
+        <member name="M:a3.Controller.Transfer(System.Decimal,System.Int32,System.Int32)">
+            <summary>
+            Transfer of customer funds from one account to another
+            </summary>
+            <param name="amount">Amount to be transferred</param>
+            <param name="id1">To account</param>
+            <param name="id2">From account</param>
+            <returns>To and from account balances called by index</returns>
+        </member>
+        <member name="M:a3.Controller.WriteBinaryData">
+            <summary>
+            Writes Customer data to binary file, persists nextID
+            </summary>
+        </member>
+        <member name="M:a3.Controller.WriteBinaryDataAccount">
+            <summary>
+            Writes Account data to binary file, persists nextID
+            </summary>
+        </member>
+        <member name="F:a3.Forms.AllCustomer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:a3.Forms.AllCustomer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:a3.Forms.AllCustomer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:a3.Forms.BlankForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:a3.Forms.BlankForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:a3.Forms.BlankForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:a3.Forms.HomePage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:a3.Forms.HomePage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:a3.Forms.HomePage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:a3.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:a3.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:a3.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:a3.Login.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:a3.Login.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:a3.Login.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:a3.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:a3.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:a3.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:a3.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:a3.Properties.Resources.bank">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

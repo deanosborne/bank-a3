@@ -1,0 +1,637 @@
+### YamlMime:ManagedReference
+items:
+- uid: a3.Models.Omni
+  commentId: T:a3.Models.Omni
+  id: Omni
+  parent: a3.Models
+  children:
+  - a3.Models.Omni.#ctor
+  - a3.Models.Omni.fee
+  - a3.Models.Omni.Fee
+  - a3.Models.Omni.interest
+  - a3.Models.Omni.Interest
+  - a3.Models.Omni.name
+  - a3.Models.Omni.Name
+  langs:
+  - csharp
+  - vb
+  name: Omni
+  nameWithType: Omni
+  fullName: a3.Models.Omni
+  type: Class
+  source:
+    id: Omni
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Omni.cs
+    startLine: 9
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Omni : Account, Ihasfee, Ihasinterest, Ihasname
+    content.vb: >-
+      <Serializable>
+
+      Public Class Omni
+          Inherits Account
+          Implements Ihasfee, Ihasinterest, Ihasname
+  inheritance:
+  - System.Object
+  - a3.Models.Account
+  inheritedMembers:
+  - a3.Models.Account.Id
+  - a3.Models.Account.CustomerId
+  - a3.Models.Account.Balance
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: a3.Models.Omni.fee
+  commentId: P:a3.Models.Omni.fee
+  id: fee
+  parent: a3.Models.Omni
+  langs:
+  - csharp
+  - vb
+  name: fee
+  nameWithType: Omni.fee
+  fullName: a3.Models.Omni.fee
+  type: Property
+  source:
+    id: fee
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Omni.cs
+    startLine: 12
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public decimal fee { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property fee As Decimal
+  overload: a3.Models.Omni.fee*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Omni.interest
+  commentId: P:a3.Models.Omni.interest
+  id: interest
+  parent: a3.Models.Omni
+  langs:
+  - csharp
+  - vb
+  name: interest
+  nameWithType: Omni.interest
+  fullName: a3.Models.Omni.interest
+  type: Property
+  source:
+    id: interest
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Omni.cs
+    startLine: 13
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public decimal interest { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property interest As Decimal
+  overload: a3.Models.Omni.interest*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Omni.name
+  commentId: P:a3.Models.Omni.name
+  id: name
+  parent: a3.Models.Omni
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: Omni.name
+  fullName: a3.Models.Omni.name
+  type: Property
+  source:
+    id: name
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Omni.cs
+    startLine: 14
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public string name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property name As String
+  overload: a3.Models.Omni.name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Omni.Fee
+  commentId: M:a3.Models.Omni.Fee
+  id: Fee
+  parent: a3.Models.Omni
+  langs:
+  - csharp
+  - vb
+  name: Fee()
+  nameWithType: Omni.Fee()
+  fullName: a3.Models.Omni.Fee()
+  type: Method
+  source:
+    id: Fee
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Omni.cs
+    startLine: 15
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public decimal Fee()
+    return:
+      type: System.Decimal
+    content.vb: Public Function Fee As Decimal
+  overload: a3.Models.Omni.Fee*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Omni.Interest
+  commentId: M:a3.Models.Omni.Interest
+  id: Interest
+  parent: a3.Models.Omni
+  langs:
+  - csharp
+  - vb
+  name: Interest()
+  nameWithType: Omni.Interest()
+  fullName: a3.Models.Omni.Interest()
+  type: Method
+  source:
+    id: Interest
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Omni.cs
+    startLine: 20
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public decimal Interest()
+    return:
+      type: System.Decimal
+    content.vb: Public Function Interest As Decimal
+  overload: a3.Models.Omni.Interest*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Omni.Name
+  commentId: M:a3.Models.Omni.Name
+  id: Name
+  parent: a3.Models.Omni
+  langs:
+  - csharp
+  - vb
+  name: Name()
+  nameWithType: Omni.Name()
+  fullName: a3.Models.Omni.Name()
+  type: Method
+  source:
+    id: Name
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Omni.cs
+    startLine: 25
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public string Name()
+    return:
+      type: System.String
+    content.vb: Public Function Name As String
+  overload: a3.Models.Omni.Name*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Models.Omni.#ctor
+  commentId: M:a3.Models.Omni.#ctor
+  id: '#ctor'
+  parent: a3.Models.Omni
+  langs:
+  - csharp
+  - vb
+  name: Omni()
+  nameWithType: Omni.Omni()
+  fullName: a3.Models.Omni.Omni()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Models\Omni.cs
+    startLine: 29
+  assemblies:
+  - a3
+  namespace: a3.Models
+  syntax:
+    content: public Omni()
+    content.vb: Public Sub New
+  overload: a3.Models.Omni.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: a3.Models
+  commentId: N:a3.Models
+  name: a3.Models
+  nameWithType: a3.Models
+  fullName: a3.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: a3.Models.Account
+  commentId: T:a3.Models.Account
+  parent: a3.Models
+  name: Account
+  nameWithType: Account
+  fullName: a3.Models.Account
+- uid: a3.Models.Account.Id
+  commentId: P:a3.Models.Account.Id
+  parent: a3.Models.Account
+  name: Id
+  nameWithType: Account.Id
+  fullName: a3.Models.Account.Id
+- uid: a3.Models.Account.CustomerId
+  commentId: P:a3.Models.Account.CustomerId
+  parent: a3.Models.Account
+  name: CustomerId
+  nameWithType: Account.CustomerId
+  fullName: a3.Models.Account.CustomerId
+- uid: a3.Models.Account.Balance
+  commentId: P:a3.Models.Account.Balance
+  parent: a3.Models.Account
+  name: Balance
+  nameWithType: Account.Balance
+  fullName: a3.Models.Account.Balance
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: a3.Models.Omni.fee*
+  commentId: Overload:a3.Models.Omni.fee
+  name: fee
+  nameWithType: Omni.fee
+  fullName: a3.Models.Omni.fee
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: a3.Models.Omni.interest*
+  commentId: Overload:a3.Models.Omni.interest
+  name: interest
+  nameWithType: Omni.interest
+  fullName: a3.Models.Omni.interest
+- uid: a3.Models.Omni.name*
+  commentId: Overload:a3.Models.Omni.name
+  name: name
+  nameWithType: Omni.name
+  fullName: a3.Models.Omni.name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: a3.Models.Omni.Fee*
+  commentId: Overload:a3.Models.Omni.Fee
+  name: Fee
+  nameWithType: Omni.Fee
+  fullName: a3.Models.Omni.Fee
+- uid: a3.Models.Omni.Interest*
+  commentId: Overload:a3.Models.Omni.Interest
+  name: Interest
+  nameWithType: Omni.Interest
+  fullName: a3.Models.Omni.Interest
+- uid: a3.Models.Omni.Name*
+  commentId: Overload:a3.Models.Omni.Name
+  name: Name
+  nameWithType: Omni.Name
+  fullName: a3.Models.Omni.Name
+- uid: a3.Models.Omni.#ctor*
+  commentId: Overload:a3.Models.Omni.#ctor
+  name: Omni
+  nameWithType: Omni.Omni
+  fullName: a3.Models.Omni.Omni

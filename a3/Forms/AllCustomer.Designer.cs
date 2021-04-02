@@ -595,6 +595,7 @@
             this.ma_searchBox.Name = "ma_searchBox";
             this.ma_searchBox.Size = new System.Drawing.Size(298, 20);
             this.ma_searchBox.TabIndex = 45;
+            this.ma_searchBox.TextChanged += new System.EventHandler(this.ma_searchBox_TextChanged);
             // 
             // ma_feeBox
             // 
@@ -854,8 +855,6 @@
             this.sfDataGrid_cm.TabIndex = 12;
             this.sfDataGrid_cm.Text = "sfDataGrid1";
             this.sfDataGrid_cm.CellClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.SfDataGrid_cm_CellClick);
-            this.sfDataGrid_cm.CellDoubleClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.sfDataGrid_cm_CellDoubleClick);
-            this.sfDataGrid_cm.Click += new System.EventHandler(this.sfDataGrid_cm_Click);
             // 
             // label3
             // 

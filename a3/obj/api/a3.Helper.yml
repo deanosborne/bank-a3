@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: a3.Helper
+  commentId: N:a3.Helper
+  id: a3.Helper
+  children:
+  - a3.Helper.SingletonDataAccount
+  - a3.Helper.SingletonDataCustomer
+  langs:
+  - csharp
+  - vb
+  name: a3.Helper
+  nameWithType: a3.Helper
+  fullName: a3.Helper
+  type: Namespace
+  assemblies:
+  - a3
+references:
+- uid: a3.Helper.SingletonDataAccount
+  commentId: T:a3.Helper.SingletonDataAccount
+  parent: a3.Helper
+  name: SingletonDataAccount
+  nameWithType: SingletonDataAccount
+  fullName: a3.Helper.SingletonDataAccount
+- uid: a3.Helper.SingletonDataCustomer
+  commentId: T:a3.Helper.SingletonDataCustomer
+  parent: a3.Helper
+  name: SingletonDataCustomer
+  nameWithType: SingletonDataCustomer
+  fullName: a3.Helper.SingletonDataCustomer
+- uid: a3.Helper
+  commentId: N:a3.Helper
+  name: a3.Helper
+  nameWithType: a3.Helper
+  fullName: a3.Helper

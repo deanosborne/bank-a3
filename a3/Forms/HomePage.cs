@@ -8,20 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using a3.Forms;
+using a3.Models;
 
 namespace a3.Forms
 {
     public partial class HomePage : Form1
     {
+        Controller _controller = new Controller();
+        AllCustomer _ac = new AllCustomer();
+
         public HomePage()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -32,10 +34,8 @@ namespace a3.Forms
 
         }
 
-
-        private void label2_Click(object sender, EventArgs e)
+        private void HomePage_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

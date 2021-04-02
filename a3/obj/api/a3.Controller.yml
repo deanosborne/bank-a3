@@ -1,0 +1,1423 @@
+### YamlMime:ManagedReference
+items:
+- uid: a3.Controller
+  commentId: T:a3.Controller
+  id: Controller
+  parent: a3
+  children:
+  - a3.Controller.#ctor
+  - a3.Controller.accList
+  - a3.Controller.AccountInfo(System.String,System.Decimal)
+  - a3.Controller.AddAccount(System.String,System.Int32,System.Decimal)
+  - a3.Controller.AddCustomer(System.String,System.String,System.Int32,System.Boolean)
+  - a3.Controller.custList
+  - a3.Controller.Deposit(System.Decimal,System.Decimal)
+  - a3.Controller.DepositInfo(System.Decimal,System.String,System.Decimal)
+  - a3.Controller.GetAccount(System.Int32)
+  - a3.Controller.GetCustomer(System.Int32)
+  - a3.Controller.Interest(System.Decimal,System.Decimal)
+  - a3.Controller.InterestInfo(System.String,System.Decimal)
+  - a3.Controller.RemoveA(System.Int32)
+  - a3.Controller.RemoveAccount(System.Int32)
+  - a3.Controller.RemoveC(System.Int32)
+  - a3.Controller.RemoveCustomer(System.Int32)
+  - a3.Controller.Transfer(System.Decimal,System.Int32,System.Int32)
+  - a3.Controller.TransferInfo(System.String,System.String,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal)
+  - a3.Controller.Withdraw(System.Decimal,System.Decimal)
+  - a3.Controller.WithdrawInfo(System.Decimal,System.String,System.Decimal)
+  - a3.Controller.WriteBinaryData
+  - a3.Controller.WriteBinaryDataAccount
+  langs:
+  - csharp
+  - vb
+  name: Controller
+  nameWithType: Controller
+  fullName: a3.Controller
+  type: Class
+  source:
+    id: Controller
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 24
+  assemblies:
+  - a3
+  namespace: a3
+  syntax:
+    content: public class Controller
+    content.vb: Public Class Controller
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: a3.Controller.accList
+  commentId: F:a3.Controller.accList
+  id: accList
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: accList
+  nameWithType: Controller.accList
+  fullName: a3.Controller.accList
+  type: Field
+  source:
+    id: accList
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 28
+  assemblies:
+  - a3
+  namespace: a3
+  syntax:
+    content: public List<Account> accList
+    return:
+      type: System.Collections.Generic.List{a3.Models.Account}
+    content.vb: Public accList As List(Of Account)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.custList
+  commentId: F:a3.Controller.custList
+  id: custList
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: custList
+  nameWithType: Controller.custList
+  fullName: a3.Controller.custList
+  type: Field
+  source:
+    id: custList
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 29
+  assemblies:
+  - a3
+  namespace: a3
+  syntax:
+    content: public List<Customer> custList
+    return:
+      type: System.Collections.Generic.List{a3.Models.Customer}
+    content.vb: Public custList As List(Of Customer)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.#ctor
+  commentId: M:a3.Controller.#ctor
+  id: '#ctor'
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: Controller()
+  nameWithType: Controller.Controller()
+  fullName: a3.Controller.Controller()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 31
+  assemblies:
+  - a3
+  namespace: a3
+  syntax:
+    content: public Controller()
+    content.vb: Public Sub New
+  overload: a3.Controller.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.AddAccount(System.String,System.Int32,System.Decimal)
+  commentId: M:a3.Controller.AddAccount(System.String,System.Int32,System.Decimal)
+  id: AddAccount(System.String,System.Int32,System.Decimal)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: AddAccount(String, Int32, Decimal)
+  nameWithType: Controller.AddAccount(String, Int32, Decimal)
+  fullName: a3.Controller.AddAccount(System.String, System.Int32, System.Decimal)
+  type: Method
+  source:
+    id: AddAccount
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 42
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nAdds a new account\n"
+  example: []
+  syntax:
+    content: public void AddAccount(string name, int id, decimal fee)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name to be added
+    - id: id
+      type: System.Int32
+      description: Id to be added
+    - id: fee
+      type: System.Decimal
+      description: Fee to be added
+    content.vb: Public Sub AddAccount(name As String, id As Integer, fee As Decimal)
+  overload: a3.Controller.AddAccount*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.AddCustomer(System.String,System.String,System.Int32,System.Boolean)
+  commentId: M:a3.Controller.AddCustomer(System.String,System.String,System.Int32,System.Boolean)
+  id: AddCustomer(System.String,System.String,System.Int32,System.Boolean)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: AddCustomer(String, String, Int32, Boolean)
+  nameWithType: Controller.AddCustomer(String, String, Int32, Boolean)
+  fullName: a3.Controller.AddCustomer(System.String, System.String, System.Int32, System.Boolean)
+  type: Method
+  source:
+    id: AddCustomer
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 53
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nAdd a new customer\n"
+  example: []
+  syntax:
+    content: public void AddCustomer(string name, string email, int phone, bool staff)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name to be added
+    - id: email
+      type: System.String
+      description: Email to be added
+    - id: phone
+      type: System.Int32
+      description: Phone number to be added
+    - id: staff
+      type: System.Boolean
+      description: Sets staff to true or false
+    content.vb: Public Sub AddCustomer(name As String, email As String, phone As Integer, staff As Boolean)
+  overload: a3.Controller.AddCustomer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.RemoveCustomer(System.Int32)
+  commentId: M:a3.Controller.RemoveCustomer(System.Int32)
+  id: RemoveCustomer(System.Int32)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: RemoveCustomer(Int32)
+  nameWithType: Controller.RemoveCustomer(Int32)
+  fullName: a3.Controller.RemoveCustomer(System.Int32)
+  type: Method
+  source:
+    id: RemoveCustomer
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 63
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nFind a customer by id from the list in Controller\n"
+  example: []
+  syntax:
+    content: public Customer RemoveCustomer(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Id to be returned
+    return:
+      type: a3.Models.Customer
+      description: Id if customer is found when compared else returns null
+    content.vb: Public Function RemoveCustomer(id As Integer) As Customer
+  overload: a3.Controller.RemoveCustomer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.RemoveAccount(System.Int32)
+  commentId: M:a3.Controller.RemoveAccount(System.Int32)
+  id: RemoveAccount(System.Int32)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: RemoveAccount(Int32)
+  nameWithType: Controller.RemoveAccount(Int32)
+  fullName: a3.Controller.RemoveAccount(System.Int32)
+  type: Method
+  source:
+    id: RemoveAccount
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 80
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nFind an account by id from the list in Controller\n"
+  example: []
+  syntax:
+    content: public Account RemoveAccount(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Id to be returned
+    return:
+      type: a3.Models.Account
+      description: Id if customer is found when compared else returns null
+    content.vb: Public Function RemoveAccount(id As Integer) As Account
+  overload: a3.Controller.RemoveAccount*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.RemoveC(System.Int32)
+  commentId: M:a3.Controller.RemoveC(System.Int32)
+  id: RemoveC(System.Int32)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: RemoveC(Int32)
+  nameWithType: Controller.RemoveC(Int32)
+  fullName: a3.Controller.RemoveC(System.Int32)
+  type: Method
+  source:
+    id: RemoveC
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 96
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nRemoves customer from cust list after comparing id\n"
+  example: []
+  syntax:
+    content: public void RemoveC(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Id to be returned
+    content.vb: Public Sub RemoveC(id As Integer)
+  overload: a3.Controller.RemoveC*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.RemoveA(System.Int32)
+  commentId: M:a3.Controller.RemoveA(System.Int32)
+  id: RemoveA(System.Int32)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: RemoveA(Int32)
+  nameWithType: Controller.RemoveA(Int32)
+  fullName: a3.Controller.RemoveA(System.Int32)
+  type: Method
+  source:
+    id: RemoveA
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 105
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nRemoves account from acc list after comparing id\n"
+  example: []
+  syntax:
+    content: public void RemoveA(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Id to be returned
+    content.vb: Public Sub RemoveA(id As Integer)
+  overload: a3.Controller.RemoveA*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.Deposit(System.Decimal,System.Decimal)
+  commentId: M:a3.Controller.Deposit(System.Decimal,System.Decimal)
+  id: Deposit(System.Decimal,System.Decimal)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: Deposit(Decimal, Decimal)
+  nameWithType: Controller.Deposit(Decimal, Decimal)
+  fullName: a3.Controller.Deposit(System.Decimal, System.Decimal)
+  type: Method
+  source:
+    id: Deposit
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 116
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nAdds an amount to the balance. Throws exception if amount under 0\n"
+  example: []
+  syntax:
+    content: public decimal Deposit(decimal amount, decimal balance)
+    parameters:
+    - id: amount
+      type: System.Decimal
+      description: Amount to be added to balance
+    - id: balance
+      type: System.Decimal
+      description: Balance before amount added
+    return:
+      type: System.Decimal
+      description: New balance
+    content.vb: Public Function Deposit(amount As Decimal, balance As Decimal) As Decimal
+  overload: a3.Controller.Deposit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.Withdraw(System.Decimal,System.Decimal)
+  commentId: M:a3.Controller.Withdraw(System.Decimal,System.Decimal)
+  id: Withdraw(System.Decimal,System.Decimal)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: Withdraw(Decimal, Decimal)
+  nameWithType: Controller.Withdraw(Decimal, Decimal)
+  fullName: a3.Controller.Withdraw(System.Decimal, System.Decimal)
+  type: Method
+  source:
+    id: Withdraw
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 133
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nSubtracts an amount to the balance. Throws exception if amount > balance, charges defined fee\n"
+  example: []
+  syntax:
+    content: public decimal Withdraw(decimal amount, decimal balance)
+    parameters:
+    - id: amount
+      type: System.Decimal
+      description: Amount to be subtracted to balance
+    - id: balance
+      type: System.Decimal
+      description: Balance before amount subtracted
+    return:
+      type: System.Decimal
+      description: New balance
+    content.vb: Public Function Withdraw(amount As Decimal, balance As Decimal) As Decimal
+  overload: a3.Controller.Withdraw*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.Interest(System.Decimal,System.Decimal)
+  commentId: M:a3.Controller.Interest(System.Decimal,System.Decimal)
+  id: Interest(System.Decimal,System.Decimal)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: Interest(Decimal, Decimal)
+  nameWithType: Controller.Interest(Decimal, Decimal)
+  fullName: a3.Controller.Interest(System.Decimal, System.Decimal)
+  type: Method
+  source:
+    id: Interest
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 154
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nCalculate interest and add to balance\n"
+  example: []
+  syntax:
+    content: public decimal Interest(decimal balance, decimal interest)
+    parameters:
+    - id: balance
+      type: System.Decimal
+      description: Balance before calulated and added interest
+    - id: interest
+      type: System.Decimal
+      description: Interest percentage to be calculated
+    return:
+      type: System.Decimal
+      description: New balance
+    content.vb: Public Function Interest(balance As Decimal, interest As Decimal) As Decimal
+  overload: a3.Controller.Interest*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.GetAccount(System.Int32)
+  commentId: M:a3.Controller.GetAccount(System.Int32)
+  id: GetAccount(System.Int32)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: GetAccount(Int32)
+  nameWithType: Controller.GetAccount(Int32)
+  fullName: a3.Controller.GetAccount(System.Int32)
+  type: Method
+  source:
+    id: GetAccount
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 174
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nCompare id in controller account list\n"
+  example: []
+  syntax:
+    content: public Account GetAccount(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Id to be compared
+    return:
+      type: a3.Models.Account
+      description: Account details
+    content.vb: Public Function GetAccount(id As Integer) As Account
+  overload: a3.Controller.GetAccount*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.GetCustomer(System.Int32)
+  commentId: M:a3.Controller.GetCustomer(System.Int32)
+  id: GetCustomer(System.Int32)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: GetCustomer(Int32)
+  nameWithType: Controller.GetCustomer(Int32)
+  fullName: a3.Controller.GetCustomer(System.Int32)
+  type: Method
+  source:
+    id: GetCustomer
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 186
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nCompare id in controller customer list\n"
+  example: []
+  syntax:
+    content: public Customer GetCustomer(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Id to be compared
+    return:
+      type: a3.Models.Customer
+      description: Customer details
+    content.vb: Public Function GetCustomer(id As Integer) As Customer
+  overload: a3.Controller.GetCustomer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.Transfer(System.Decimal,System.Int32,System.Int32)
+  commentId: M:a3.Controller.Transfer(System.Decimal,System.Int32,System.Int32)
+  id: Transfer(System.Decimal,System.Int32,System.Int32)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: Transfer(Decimal, Int32, Int32)
+  nameWithType: Controller.Transfer(Decimal, Int32, Int32)
+  fullName: a3.Controller.Transfer(System.Decimal, System.Int32, System.Int32)
+  type: Method
+  source:
+    id: Transfer
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 200
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nTransfer of customer funds from one account to another\n"
+  example: []
+  syntax:
+    content: public decimal[] Transfer(decimal amount, int id1, int id2)
+    parameters:
+    - id: amount
+      type: System.Decimal
+      description: Amount to be transferred
+    - id: id1
+      type: System.Int32
+      description: To account
+    - id: id2
+      type: System.Int32
+      description: From account
+    return:
+      type: System.Decimal[]
+      description: To and from account balances called by index
+    content.vb: Public Function Transfer(amount As Decimal, id1 As Integer, id2 As Integer) As Decimal()
+  overload: a3.Controller.Transfer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.AccountInfo(System.String,System.Decimal)
+  commentId: M:a3.Controller.AccountInfo(System.String,System.Decimal)
+  id: AccountInfo(System.String,System.Decimal)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: AccountInfo(String, Decimal)
+  nameWithType: Controller.AccountInfo(String, Decimal)
+  fullName: a3.Controller.AccountInfo(System.String, System.Decimal)
+  type: Method
+  source:
+    id: AccountInfo
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 244
+  assemblies:
+  - a3
+  namespace: a3
+  syntax:
+    content: public virtual string AccountInfo(string acctype, decimal balance)
+    parameters:
+    - id: acctype
+      type: System.String
+    - id: balance
+      type: System.Decimal
+    return:
+      type: System.String
+    content.vb: Public Overridable Function AccountInfo(acctype As String, balance As Decimal) As String
+  overload: a3.Controller.AccountInfo*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: a3.Controller.DepositInfo(System.Decimal,System.String,System.Decimal)
+  commentId: M:a3.Controller.DepositInfo(System.Decimal,System.String,System.Decimal)
+  id: DepositInfo(System.Decimal,System.String,System.Decimal)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: DepositInfo(Decimal, String, Decimal)
+  nameWithType: Controller.DepositInfo(Decimal, String, Decimal)
+  fullName: a3.Controller.DepositInfo(System.Decimal, System.String, System.Decimal)
+  type: Method
+  source:
+    id: DepositInfo
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 255
+  assemblies:
+  - a3
+  namespace: a3
+  syntax:
+    content: public virtual string DepositInfo(decimal amount, string acctype, decimal balance)
+    parameters:
+    - id: amount
+      type: System.Decimal
+    - id: acctype
+      type: System.String
+    - id: balance
+      type: System.Decimal
+    return:
+      type: System.String
+    content.vb: Public Overridable Function DepositInfo(amount As Decimal, acctype As String, balance As Decimal) As String
+  overload: a3.Controller.DepositInfo*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: a3.Controller.WithdrawInfo(System.Decimal,System.String,System.Decimal)
+  commentId: M:a3.Controller.WithdrawInfo(System.Decimal,System.String,System.Decimal)
+  id: WithdrawInfo(System.Decimal,System.String,System.Decimal)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: WithdrawInfo(Decimal, String, Decimal)
+  nameWithType: Controller.WithdrawInfo(Decimal, String, Decimal)
+  fullName: a3.Controller.WithdrawInfo(System.Decimal, System.String, System.Decimal)
+  type: Method
+  source:
+    id: WithdrawInfo
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 265
+  assemblies:
+  - a3
+  namespace: a3
+  syntax:
+    content: public virtual string WithdrawInfo(decimal amount, string acctype, decimal balance)
+    parameters:
+    - id: amount
+      type: System.Decimal
+    - id: acctype
+      type: System.String
+    - id: balance
+      type: System.Decimal
+    return:
+      type: System.String
+    content.vb: Public Overridable Function WithdrawInfo(amount As Decimal, acctype As String, balance As Decimal) As String
+  overload: a3.Controller.WithdrawInfo*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: a3.Controller.InterestInfo(System.String,System.Decimal)
+  commentId: M:a3.Controller.InterestInfo(System.String,System.Decimal)
+  id: InterestInfo(System.String,System.Decimal)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: InterestInfo(String, Decimal)
+  nameWithType: Controller.InterestInfo(String, Decimal)
+  fullName: a3.Controller.InterestInfo(System.String, System.Decimal)
+  type: Method
+  source:
+    id: InterestInfo
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 274
+  assemblies:
+  - a3
+  namespace: a3
+  syntax:
+    content: public virtual string InterestInfo(string acctype, decimal balance)
+    parameters:
+    - id: acctype
+      type: System.String
+    - id: balance
+      type: System.Decimal
+    return:
+      type: System.String
+    content.vb: Public Overridable Function InterestInfo(acctype As String, balance As Decimal) As String
+  overload: a3.Controller.InterestInfo*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: a3.Controller.TransferInfo(System.String,System.String,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal)
+  commentId: M:a3.Controller.TransferInfo(System.String,System.String,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal)
+  id: TransferInfo(System.String,System.String,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal)
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: TransferInfo(String, String, Int32, Int32, Decimal, Decimal, Decimal)
+  nameWithType: Controller.TransferInfo(String, String, Int32, Int32, Decimal, Decimal, Decimal)
+  fullName: a3.Controller.TransferInfo(System.String, System.String, System.Int32, System.Int32, System.Decimal, System.Decimal, System.Decimal)
+  type: Method
+  source:
+    id: TransferInfo
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 284
+  assemblies:
+  - a3
+  namespace: a3
+  syntax:
+    content: public virtual string TransferInfo(string account1, string account2, int id1, int id2, decimal amount, decimal balance, decimal balance2)
+    parameters:
+    - id: account1
+      type: System.String
+    - id: account2
+      type: System.String
+    - id: id1
+      type: System.Int32
+    - id: id2
+      type: System.Int32
+    - id: amount
+      type: System.Decimal
+    - id: balance
+      type: System.Decimal
+    - id: balance2
+      type: System.Decimal
+    return:
+      type: System.String
+    content.vb: Public Overridable Function TransferInfo(account1 As String, account2 As String, id1 As Integer, id2 As Integer, amount As Decimal, balance As Decimal, balance2 As Decimal) As String
+  overload: a3.Controller.TransferInfo*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: a3.Controller.WriteBinaryData
+  commentId: M:a3.Controller.WriteBinaryData
+  id: WriteBinaryData
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: WriteBinaryData()
+  nameWithType: Controller.WriteBinaryData()
+  fullName: a3.Controller.WriteBinaryData()
+  type: Method
+  source:
+    id: WriteBinaryData
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 299
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nWrites Customer data to binary file, persists nextID\n"
+  example: []
+  syntax:
+    content: public void WriteBinaryData()
+    content.vb: Public Sub WriteBinaryData
+  overload: a3.Controller.WriteBinaryData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: a3.Controller.WriteBinaryDataAccount
+  commentId: M:a3.Controller.WriteBinaryDataAccount
+  id: WriteBinaryDataAccount
+  parent: a3.Controller
+  langs:
+  - csharp
+  - vb
+  name: WriteBinaryDataAccount()
+  nameWithType: Controller.WriteBinaryDataAccount()
+  fullName: a3.Controller.WriteBinaryDataAccount()
+  type: Method
+  source:
+    id: WriteBinaryDataAccount
+    path: C:\Users\imdea\source\repos\bank-ass3\a3\Controller.cs
+    startLine: 320
+  assemblies:
+  - a3
+  namespace: a3
+  summary: "\nWrites Account data to binary file, persists nextID\n"
+  example: []
+  syntax:
+    content: public void WriteBinaryDataAccount()
+    content.vb: Public Sub WriteBinaryDataAccount
+  overload: a3.Controller.WriteBinaryDataAccount*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: a3
+  commentId: N:a3
+  name: a3
+  nameWithType: a3
+  fullName: a3
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{a3.Models.Account}
+  commentId: T:System.Collections.Generic.List{a3.Models.Account}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Account>
+  nameWithType: List<Account>
+  fullName: System.Collections.Generic.List<a3.Models.Account>
+  nameWithType.vb: List(Of Account)
+  fullName.vb: System.Collections.Generic.List(Of a3.Models.Account)
+  name.vb: List(Of Account)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: a3.Models.Account
+    name: Account
+    nameWithType: Account
+    fullName: a3.Models.Account
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: a3.Models.Account
+    name: Account
+    nameWithType: Account
+    fullName: a3.Models.Account
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.List{a3.Models.Customer}
+  commentId: T:System.Collections.Generic.List{a3.Models.Customer}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Customer>
+  nameWithType: List<Customer>
+  fullName: System.Collections.Generic.List<a3.Models.Customer>
+  nameWithType.vb: List(Of Customer)
+  fullName.vb: System.Collections.Generic.List(Of a3.Models.Customer)
+  name.vb: List(Of Customer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: a3.Models.Customer
+    name: Customer
+    nameWithType: Customer
+    fullName: a3.Models.Customer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: a3.Models.Customer
+    name: Customer
+    nameWithType: Customer
+    fullName: a3.Models.Customer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: a3.Controller.#ctor*
+  commentId: Overload:a3.Controller.#ctor
+  name: Controller
+  nameWithType: Controller.Controller
+  fullName: a3.Controller.Controller
+- uid: a3.Controller.AddAccount*
+  commentId: Overload:a3.Controller.AddAccount
+  name: AddAccount
+  nameWithType: Controller.AddAccount
+  fullName: a3.Controller.AddAccount
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: a3.Controller.AddCustomer*
+  commentId: Overload:a3.Controller.AddCustomer
+  name: AddCustomer
+  nameWithType: Controller.AddCustomer
+  fullName: a3.Controller.AddCustomer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: a3.Controller.RemoveCustomer*
+  commentId: Overload:a3.Controller.RemoveCustomer
+  name: RemoveCustomer
+  nameWithType: Controller.RemoveCustomer
+  fullName: a3.Controller.RemoveCustomer
+- uid: a3.Models.Customer
+  commentId: T:a3.Models.Customer
+  parent: a3.Models
+  name: Customer
+  nameWithType: Customer
+  fullName: a3.Models.Customer
+- uid: a3.Models
+  commentId: N:a3.Models
+  name: a3.Models
+  nameWithType: a3.Models
+  fullName: a3.Models
+- uid: a3.Controller.RemoveAccount*
+  commentId: Overload:a3.Controller.RemoveAccount
+  name: RemoveAccount
+  nameWithType: Controller.RemoveAccount
+  fullName: a3.Controller.RemoveAccount
+- uid: a3.Models.Account
+  commentId: T:a3.Models.Account
+  parent: a3.Models
+  name: Account
+  nameWithType: Account
+  fullName: a3.Models.Account
+- uid: a3.Controller.RemoveC*
+  commentId: Overload:a3.Controller.RemoveC
+  name: RemoveC
+  nameWithType: Controller.RemoveC
+  fullName: a3.Controller.RemoveC
+- uid: a3.Controller.RemoveA*
+  commentId: Overload:a3.Controller.RemoveA
+  name: RemoveA
+  nameWithType: Controller.RemoveA
+  fullName: a3.Controller.RemoveA
+- uid: a3.Controller.Deposit*
+  commentId: Overload:a3.Controller.Deposit
+  name: Deposit
+  nameWithType: Controller.Deposit
+  fullName: a3.Controller.Deposit
+- uid: a3.Controller.Withdraw*
+  commentId: Overload:a3.Controller.Withdraw
+  name: Withdraw
+  nameWithType: Controller.Withdraw
+  fullName: a3.Controller.Withdraw
+- uid: a3.Controller.Interest*
+  commentId: Overload:a3.Controller.Interest
+  name: Interest
+  nameWithType: Controller.Interest
+  fullName: a3.Controller.Interest
+- uid: a3.Controller.GetAccount*
+  commentId: Overload:a3.Controller.GetAccount
+  name: GetAccount
+  nameWithType: Controller.GetAccount
+  fullName: a3.Controller.GetAccount
+- uid: a3.Controller.GetCustomer*
+  commentId: Overload:a3.Controller.GetCustomer
+  name: GetCustomer
+  nameWithType: Controller.GetCustomer
+  fullName: a3.Controller.GetCustomer
+- uid: a3.Controller.Transfer*
+  commentId: Overload:a3.Controller.Transfer
+  name: Transfer
+  nameWithType: Controller.Transfer
+  fullName: a3.Controller.Transfer
+- uid: System.Decimal[]
+  isExternal: true
+  name: Decimal[]
+  nameWithType: Decimal[]
+  fullName: System.Decimal[]
+  nameWithType.vb: Decimal()
+  fullName.vb: System.Decimal()
+  name.vb: Decimal()
+  spec.csharp:
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: a3.Controller.AccountInfo*
+  commentId: Overload:a3.Controller.AccountInfo
+  name: AccountInfo
+  nameWithType: Controller.AccountInfo
+  fullName: a3.Controller.AccountInfo
+- uid: a3.Controller.DepositInfo*
+  commentId: Overload:a3.Controller.DepositInfo
+  name: DepositInfo
+  nameWithType: Controller.DepositInfo
+  fullName: a3.Controller.DepositInfo
+- uid: a3.Controller.WithdrawInfo*
+  commentId: Overload:a3.Controller.WithdrawInfo
+  name: WithdrawInfo
+  nameWithType: Controller.WithdrawInfo
+  fullName: a3.Controller.WithdrawInfo
+- uid: a3.Controller.InterestInfo*
+  commentId: Overload:a3.Controller.InterestInfo
+  name: InterestInfo
+  nameWithType: Controller.InterestInfo
+  fullName: a3.Controller.InterestInfo
+- uid: a3.Controller.TransferInfo*
+  commentId: Overload:a3.Controller.TransferInfo
+  name: TransferInfo
+  nameWithType: Controller.TransferInfo
+  fullName: a3.Controller.TransferInfo
+- uid: a3.Controller.WriteBinaryData*
+  commentId: Overload:a3.Controller.WriteBinaryData
+  name: WriteBinaryData
+  nameWithType: Controller.WriteBinaryData
+  fullName: a3.Controller.WriteBinaryData
+- uid: a3.Controller.WriteBinaryDataAccount*
+  commentId: Overload:a3.Controller.WriteBinaryDataAccount
+  name: WriteBinaryDataAccount
+  nameWithType: Controller.WriteBinaryDataAccount
+  fullName: a3.Controller.WriteBinaryDataAccount

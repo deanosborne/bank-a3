@@ -28,7 +28,7 @@ namespace a3
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 myForm = new Form2();
+            Login myForm = new Login();
             myForm.Closed += (s, args) => this.Close();
             myForm.Show();
         }
